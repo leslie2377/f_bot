@@ -6,8 +6,15 @@ export function useChat() {
   const [messages, setMessages] = useState([
     {
       role: 'bot',
-      content: '안녕하세요! 프리티 셀프개통 상담 AI입니다 😊\n\n셀프개통, 요금제, 약관 등 궁금한 점을 물어보세요!',
-      quickButtons: ['셀프개통 방법', '요금제 보기', '고객센터 연결']
+      content: '안녕하세요! 프리티 셀프개통 상담 AI입니다 😊\n\n궁금한 점을 물어보시거나, 아래 자주 묻는 질문을 선택해주세요!',
+      quickButtons: [
+        '셀프개통 방법',
+        '요금제 추천',
+        '준비물 확인',
+        '고객센터 연결',
+        '유심/eSIM 안내',
+        '번호이동 방법'
+      ]
     }
   ]);
   const [isLoading, setIsLoading] = useState(false);

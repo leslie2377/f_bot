@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { login, authenticate } = require('../middleware/adminAuth');
 const store = require('../services/conversationStore');
+const { getKeywordStats, getCacheStats } = require('../services/responseCache');
 
 // 로그인 (인증 불필요)
 router.post('/login', login);
@@ -55,6 +56,17 @@ router.get('/unresolved', (req, res) => {
 router.get('/popular', (req, res) => {
   const { limit } = req.query;
   res.json(store.getPopularQuestions(parseInt(limit) || 10));
+});
+
+// 키워드 통계
+router.get('/keywords', (req, res) => {
+  const { sort, limit, category } = req.query;
+  res.json(getKeywordStats({ sort, limit: parseInt(limit) || 50, category }));
+});
+
+// 캐시 통계
+router.get('/cache', (req, res) => {
+  res.json(getCacheStats());
 });
 
 // 내보내기

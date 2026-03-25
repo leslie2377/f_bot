@@ -11,11 +11,11 @@ router.post('/', async (req, res) => {
     }
 
     const sid = sessionId || `session_${Date.now()}`;
-    const { reply, category } = await chat(message.trim(), sid);
+    const { reply, category, source, tokensUsed } = await chat(message.trim(), sid);
 
     const quickButtons = getQuickButtons(category);
 
-    res.json({ reply, category, sessionId: sid, quickButtons });
+    res.json({ reply, category, sessionId: sid, quickButtons, source, tokensUsed });
   } catch (error) {
     console.error('Chat error:', error.message);
     res.status(500).json({

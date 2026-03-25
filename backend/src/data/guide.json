@@ -86,6 +86,40 @@
     "overseas_kt": { "number": "+82-70-4481-8747", "name": "해외 KT" },
     "overseas_lgu": { "number": "+82-70-4481-8745", "name": "해외 LG U+" },
     "hours": "평일 09:00~18:00 (점심 12:00~13:00, 토/일 휴무)",
-    "inquiry": "https://www.freet.co.kr/customer/inquiry/form"
-  }
+    "inquiry": "https://www.freet.co.kr/customer/inquiry/form",
+    "email": { "skt": "skt@freet.co.kr", "kt": "kt@freet.co.kr", "lgu": "lg@freet.co.kr" },
+    "chat": "프리티 홈페이지 온라인 채팅 상담 가능"
+  },
+  "esim": {
+    "checkMethod": "*#06# 다이얼 → IMEI 2개 표시되면 eSIM 지원",
+    "openUrl": "https://www.freet.co.kr/self/esimOpen",
+    "guideUrl": "https://www.freet.co.kr/usim/guide/esimGuide",
+    "profileFee": 2750,
+    "activationCodes": {
+      "skt": "LPA:1$RSP-3022.IDEMIA.IO$",
+      "kt": "kt.prod.ondemandconnectivity.com",
+      "lgu": "lgu.prod.ondemandconnectivity.com"
+    },
+    "installMethods": ["QR코드 스캔", "휴대폰 설정에서 추가", "활성화코드 직접 입력"],
+    "notes": [
+      "프로파일 발급비용 2,750원",
+      "eSIM 삭제 시 재발급비용 2,750원 추가",
+      "듀얼심 휴대폰은 동일 명의 회선만 사용 가능",
+      "해외폰은 컨트리락 해제 필수"
+    ]
+  },
+  "prepaid": {
+    "chargeMethod": "편의점 방문 충전 또는 프리티 홈페이지/앱 온라인 충전",
+    "minCharge": 5000,
+    "balanceCheck": "프리티 앱 또는 홈페이지 MY페이지",
+    "planUrl": "https://www.freet.co.kr/plan/ratePlan?svcTypes=PP"
+  },
+  "selfServices": [
+    "부가서비스 조회/신청",
+    "자동납부 변경",
+    "청구서 변경",
+    "번호변경",
+    "해지신청",
+    "개인정보 열람"
+  ]
 }

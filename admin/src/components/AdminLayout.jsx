@@ -3,6 +3,7 @@ import Dashboard from './Dashboard.jsx';
 import SessionList from './SessionList.jsx';
 import SessionDetail from './SessionDetail.jsx';
 import UnresolvedList from './UnresolvedList.jsx';
+import KeywordStats from './KeywordStats.jsx';
 
 function AdminLayout({ onLogout }) {
   const [currentPage, setCurrentPage] = useState('dashboard');
@@ -23,6 +24,8 @@ function AdminLayout({ onLogout }) {
         return <SessionDetail sessionId={selectedSessionId} onBack={() => navigate('sessions')} />;
       case 'unresolved':
         return <UnresolvedList onSelectSession={(id) => navigate('detail', id)} />;
+      case 'keywords':
+        return <KeywordStats />;
       default:
         return <Dashboard />;
     }
@@ -44,6 +47,9 @@ function AdminLayout({ onLogout }) {
           </button>
           <button className={`nav-item ${currentPage === 'unresolved' ? 'active' : ''}`} onClick={() => navigate('unresolved')}>
             ❓ 미해결 질문
+          </button>
+          <button className={`nav-item ${currentPage === 'keywords' ? 'active' : ''}`} onClick={() => navigate('keywords')}>
+            🔑 키워드 통계
           </button>
         </nav>
         <div className="sidebar-footer">

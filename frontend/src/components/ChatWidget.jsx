@@ -147,7 +147,7 @@ function processLine(line) {
     if (linkMatch) {
       return (
         <a key={idx} href={linkMatch[2]} target="_blank" rel="noopener noreferrer"
-          style={{ color: '#e91e63', textDecoration: 'underline', fontWeight: 600 }}>
+          style={{ color: '#f0543a', textDecoration: 'underline', fontWeight: 600 }}>
           {linkMatch[1]}
         </a>
       );

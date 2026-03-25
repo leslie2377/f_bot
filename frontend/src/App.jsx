@@ -11,7 +11,7 @@ function App() {
         padding: '0 20px',
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
       }}>
-        <h1 style={{ color: '#e91e63' }}>프리티 모바일</h1>
+        <h1 style={{ color: '#f0543a' }}>프리티 모바일</h1>
         <p style={{ color: '#666', lineHeight: 1.8 }}>
           안녕하세요! 프리텔레콤(프리티)입니다.<br />
           SKT, KT, LG U+ 3개 통신망 알뜰폰 서비스를 제공합니다.<br />
