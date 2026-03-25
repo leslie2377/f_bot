@@ -1,0 +1,89 @@
+{
+  "selfActivation": {
+    "steps": [
+      {
+        "step": 1,
+        "title": "유심 준비",
+        "description": "프리티 홈페이지 또는 편의점에서 유심카드를 구매합니다."
+      },
+      {
+        "step": 2,
+        "title": "셀프개통 페이지 접속",
+        "description": "freet.co.kr에서 셀프개통 페이지로 이동합니다."
+      },
+      {
+        "step": 3,
+        "title": "개통 유형 선택",
+        "description": "신규가입 또는 번호이동 중 선택합니다."
+      },
+      {
+        "step": 4,
+        "title": "요금제 선택",
+        "description": "원하는 통신망(SKT/KT/LG U+)과 요금제를 선택합니다."
+      },
+      {
+        "step": 5,
+        "title": "본인인증",
+        "description": "신분증(주민등록증/운전면허증)과 인증수단(네이버인증서, 토스인증서, 신용카드, 공동인증서)으로 본인인증을 완료합니다."
+      },
+      {
+        "step": 6,
+        "title": "신청서 작성",
+        "description": "가입 정보를 입력하고 이용약관에 동의합니다."
+      },
+      {
+        "step": 7,
+        "title": "개통 완료",
+        "description": "개통 완료된 유심을 휴대폰에 넣고 전원을 2~3번 껐다 켜면 사용 가능합니다."
+      }
+    ],
+    "requirements": {
+      "documents": ["주민등록증 또는 운전면허증"],
+      "authentication": ["네이버인증서", "토스인증서", "신용카드", "공동인증서"],
+      "note": "선불개통 시 네이버/토스 인증 불가. KT/LG 공용유심은 신용카드 또는 공동인증서만 가능."
+    },
+    "hours": {
+      "newActivation": "09:00~20:00 (수요일 SKT: 08:00~21:00)",
+      "numberTransfer": "10:00~19:00",
+      "closed": "일요일, 신정, 설, 추석 당일 번호이동 불가"
+    },
+    "restrictions": {
+      "maxLines": "1인당 최대 9회선 (선불/후불 통신망별 3개)",
+      "newLineLimit": "180일 이내 3회선 이상 개통 제한",
+      "numberTransfer": "이전 통신사 이용 3개월 경과 필요",
+      "foreigner": "선불/후불 각 1회선 (일 1회선만 가능)",
+      "corporation": "선불/후불 합산 4회선",
+      "minor": "셀프개통 불가, 상담사개통 이용"
+    },
+    "troubleshooting": [
+      {
+        "problem": "유심 인식 오류",
+        "steps": [
+          "휴대폰 전원을 2~3회 껐다 켜기",
+          "같은 통신망 타인 폰에서 유심 인식 테스트",
+          "해결 안 될 시 고객센터 접수"
+        ]
+      },
+      {
+        "problem": "개통 후 통화/데이터 안됨",
+        "steps": [
+          "휴대폰 전원 재시작",
+          "APN(접근점) 설정 확인",
+          "해결 안 될 시 고객센터 접수"
+        ]
+      }
+    ]
+  },
+  "customerService": {
+    "skt": { "number": "1661-2207", "name": "SKT 알뜰폰" },
+    "kt": { "number": "1577-4551", "name": "KT 알뜰폰" },
+    "lgu": { "number": "1588-3615", "name": "U+ 알뜰폰" },
+    "complaint": { "number": "02-3489-7351", "name": "민원실" },
+    "free": { "number": "114", "name": "프리티 이용 고객 무료" },
+    "overseas_skt": { "number": "+82-70-4481-8760", "name": "해외 SKT" },
+    "overseas_kt": { "number": "+82-70-4481-8747", "name": "해외 KT" },
+    "overseas_lgu": { "number": "+82-70-4481-8745", "name": "해외 LG U+" },
+    "hours": "평일 09:00~18:00 (점심 12:00~13:00, 토/일 휴무)",
+    "inquiry": "https://www.freet.co.kr/customer/inquiry/form"
+  }
+}

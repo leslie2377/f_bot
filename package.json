@@ -1,13 +1,16 @@
 {
-  "name": "freet-bot",
+  "name": "f_bot",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "프리텔레콤 셀프개통 상담 챗봇",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:all": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:admin\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:admin": "cd admin && npm run dev",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install && cd ../admin && npm install"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
 }
