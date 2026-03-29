@@ -3,3 +3,8 @@ node_modules/
 dist/
 .DS_Store
 backend/src/data/conversations/
+backend/src/data/vectorstore/
+backend/src/data/response_cache.json
+backend/src/data/keyword_stats.json
+backend/src/data/manual_docs.json
+backend/src/data/pdf/*.pdf
