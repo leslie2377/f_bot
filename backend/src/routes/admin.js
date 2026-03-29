@@ -7,6 +7,7 @@ const { addDocuments, addToSourceJson, saveManualDoc, getManualDocs, deleteManua
 const { Document } = require('@langchain/core/documents');
 const fs = require('fs');
 const path = require('path');
+const { toKSTString } = require('../utils/kst');
 
 // 로그인
 router.post('/login', login);
@@ -76,6 +77,36 @@ router.post('/unresolved-queue/:id/resolve', async (req, res) => {
   res.json({ success: true });
 });
 
+// ═══ 응답 수정 (즉시 조치) ═══
+
+// 봇 응답 수정 → 캐시 즉시 반영
+router.post('/messages/:messageId/correct', (req, res) => {
+  const { correctedReply } = req.body;
+  if (!correctedReply?.trim()) return res.status(400).json({ error: '수정된 답변을 입력하세요.' });
+  const result = dbQ.correctResponse(req.params.messageId, correctedReply.trim());
+  if (!result) return res.status(404).json({ error: '메시지를 찾을 수 없습니다.' });
+  res.json({ success: true, ...result, message: '수정 완료. 동일 질문 시 수정된 답변이 제공됩니다.' });
+});
+
+// 관리자 답변 직접 등록 (질문 + 답변)
+router.post('/responses/add', async (req, res) => {
+  const { question, reply, category, addToFaq } = req.body;
+  if (!question?.trim() || !reply?.trim()) return res.status(400).json({ error: '질문과 답변을 모두 입력하세요.' });
+
+  // 캐시 등록
+  const result = dbQ.setAdminResponse(question.trim(), reply.trim(), category);
+
+  // FAQ 등록 옵션
+  if (addToFaq) {
+    const content = `질문: ${question.trim()}\n답변: ${reply.trim()}`;
+    addToSourceJson('faq', content);
+    const doc = new Document({ pageContent: content, metadata: { source: 'admin_response', type: 'faq' } });
+    await addDocuments([doc]);
+  }
+
+  res.json({ success: true, ...result, faqAdded: !!addToFaq, message: addToFaq ? '캐시 + FAQ + 벡터DB 반영 완료' : '캐시에 반영 완료' });
+});
+
 // ═══ 키워드 ═══
 router.get('/keywords', (req, res) => {
   res.json(dbQ.getKeywordStats({ sort: req.query.sort, limit: parseInt(req.query.limit) || 50, category: req.query.category }));
@@ -109,7 +140,7 @@ router.post('/rag/add', async (req, res) => {
     const sourceResult = addToSourceJson(type || 'manual', content.trim());
     const doc = new Document({ pageContent: content.trim(), metadata: { source: 'manual', type: type || 'manual', ...metadata } });
     const { added, stats } = await addDocuments([doc]);
-    const record = { id: `doc_${Date.now()}`, type: type || 'manual', content: content.trim(), sourceId: sourceResult.sourceId, createdAt: new Date().toISOString() };
+    const record = { id: `doc_${Date.now()}`, type: type || 'manual', content: content.trim(), sourceId: sourceResult.sourceId, createdAt: toKSTString() };
     saveManualDoc(record);
     res.json({ success: true, added, record, stats });
   } catch (err) { res.status(500).json({ error: err.message }); }

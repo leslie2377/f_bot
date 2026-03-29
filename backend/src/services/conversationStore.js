@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { toKSTString, toKSTDate } = require('../utils/kst');
 
 const CONV_DIR = path.join(__dirname, '..', 'data', 'conversations');
 const SESSIONS_DIR = path.join(CONV_DIR, 'sessions');
@@ -20,13 +21,12 @@ function init() {
 }
 
 function saveIndex() {
-  index.stats.lastUpdated = new Date().toISOString();
+  index.stats.lastUpdated = toKSTString();
   fs.writeFileSync(INDEX_PATH, JSON.stringify(index, null, 2));
 }
 
 function getDateFolder() {
-  const d = new Date();
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  return toKSTDate();
 }
 
 function getSessionPath(sessionId) {
@@ -76,7 +76,7 @@ function isUnresolved(botContent) {
 // ─── 저장 API ───
 
 function saveMessage(sessionId, msg) {
-  const now = new Date().toISOString();
+  const now = toKSTString();
   const msgId = `msg_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`;
 
   // 세션 파일 로드 또는 생성

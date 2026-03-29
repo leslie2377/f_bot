@@ -193,6 +193,11 @@ body {
 .add-actions { display: flex; align-items: center; gap: 12px; }
 .add-status { font-size: 13px; color: #4caf50; font-weight: 600; }
 
+/* 응답 수정 버튼 */
+.correct-btn { background: none; border: 1px solid #ff9800; color: #ff9800; padding: 2px 8px; border-radius: 10px; font-size: 11px; cursor: pointer; margin-left: auto; transition: all 0.2s; }
+.correct-btn:hover { background: #ff9800; color: #fff; }
+.correct-form { margin-top: 8px; }
+
 /* RAG 탭 */
 .rag-tabs { display: flex; gap: 4px; margin-bottom: 16px; background: #fff; border-radius: 10px; padding: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .rag-tab { flex: 1; padding: 10px 8px; border: none; background: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; color: #888; transition: all 0.2s; }

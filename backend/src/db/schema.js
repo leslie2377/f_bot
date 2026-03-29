@@ -14,7 +14,7 @@ db.exec(`
   -- 세션 테이블
   CREATE TABLE IF NOT EXISTS sessions (
     session_id    TEXT PRIMARY KEY,
-    started_at    TEXT NOT NULL DEFAULT (datetime('now')),
+    started_at    TEXT NOT NULL DEFAULT (datetime('now','+9 hours')),
     last_message_at TEXT,
     message_count   INTEGER DEFAULT 0,
     user_msg_count  INTEGER DEFAULT 0,
@@ -35,7 +35,7 @@ db.exec(`
   CREATE TABLE IF NOT EXISTS messages (
     id            TEXT PRIMARY KEY,
     session_id    TEXT NOT NULL REFERENCES sessions(session_id) ON DELETE CASCADE,
-    timestamp     TEXT NOT NULL DEFAULT (datetime('now')),
+    timestamp     TEXT NOT NULL DEFAULT (datetime('now','+9 hours')),
     role          TEXT NOT NULL CHECK(role IN ('user','bot')),
     content       TEXT NOT NULL,
     category      TEXT DEFAULT 'general',
@@ -53,7 +53,7 @@ db.exec(`
     word          TEXT PRIMARY KEY,
     count         INTEGER DEFAULT 1,
     category      TEXT DEFAULT 'general',
-    last_seen     TEXT DEFAULT (datetime('now'))
+    last_seen     TEXT DEFAULT (datetime('now','+9 hours'))
   );
 
   -- 응답 캐시 테이블
@@ -62,7 +62,7 @@ db.exec(`
     reply         TEXT NOT NULL,
     category      TEXT,
     hit_count     INTEGER DEFAULT 0,
-    created_at    TEXT DEFAULT (datetime('now')),
+    created_at    TEXT DEFAULT (datetime('now','+9 hours')),
     last_hit_at   TEXT
   );
 
@@ -93,7 +93,7 @@ db.exec(`
     occurrence    INTEGER DEFAULT 1,
     status        TEXT DEFAULT 'pending' CHECK(status IN ('pending','reviewed','resolved','faq_added')),
     admin_answer  TEXT,
-    created_at    TEXT DEFAULT (datetime('now')),
+    created_at    TEXT DEFAULT (datetime('now','+9 hours')),
     resolved_at   TEXT
   );
 

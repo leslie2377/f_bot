@@ -1,4 +1,5 @@
 const db = require('./schema');
+const { toKSTDate, toKSTDateTime } = require('../utils/kst');
 
 // ═══════════════════════════════════════
 //  세션 & 메시지
@@ -6,10 +7,10 @@ const db = require('./schema');
 
 const stmts = {
   // 세션
-  insertSession: db.prepare(`INSERT OR IGNORE INTO sessions (session_id, started_at) VALUES (?, datetime('now'))`),
+  insertSession: db.prepare(`INSERT OR IGNORE INTO sessions (session_id, started_at) VALUES (?, datetime('now','+9 hours'))`),
   updateSession: db.prepare(`
     UPDATE sessions SET
-      last_message_at = datetime('now'),
+      last_message_at = datetime('now','+9 hours'),
       message_count = message_count + 1,
       user_msg_count = CASE WHEN ? = 'user' THEN user_msg_count + 1 ELSE user_msg_count END,
       bot_msg_count = CASE WHEN ? = 'bot' THEN bot_msg_count + 1 ELSE bot_msg_count END,
@@ -84,21 +85,21 @@ function saveFeedback(messageId, feedback) {
 
 function getSessions({ page = 1, limit = 20, search, category, status, dateFrom, dateTo, sort = 'latest' } = {}) {
   let where = ['1=1'];
-  const params = {};
+  const params = [];
 
-  if (search) { where.push("(first_user_msg LIKE '%' || $search || '%' OR session_id LIKE '%' || $search || '%')"); params.$search = search; }
-  if (category) { where.push('primary_category = $category'); params.$category = category; }
+  if (search) { where.push("(first_user_msg LIKE '%' || ? || '%' OR session_id LIKE '%' || ? || '%')"); params.push(search, search); }
+  if (category) { where.push('primary_category = ?'); params.push(category); }
   if (status === 'unresolved') { where.push('has_unresolved = 1'); }
-  else if (status) { where.push('status = $status'); params.$status = status; }
-  if (dateFrom) { where.push("date(started_at) >= $dateFrom"); params.$dateFrom = dateFrom; }
-  if (dateTo) { where.push("date(started_at) <= $dateTo"); params.$dateTo = dateTo; }
+  else if (status) { where.push('status = ?'); params.push(status); }
+  if (dateFrom) { where.push("date(started_at) >= ?"); params.push(dateFrom); }
+  if (dateTo) { where.push("date(started_at) <= ?"); params.push(dateTo); }
 
   const orderBy = sort === 'oldest' ? 'started_at ASC' : sort === 'messages' ? 'message_count DESC' : 'started_at DESC';
   const whereClause = where.join(' AND ');
 
-  const total = db.prepare(`SELECT COUNT(*) as c FROM sessions WHERE ${whereClause}`).get(params).c;
+  const total = db.prepare(`SELECT COUNT(*) as c FROM sessions WHERE ${whereClause}`).get(...params).c;
   const offset = (page - 1) * limit;
-  const sessions = db.prepare(`SELECT * FROM sessions WHERE ${whereClause} ORDER BY ${orderBy} LIMIT $limit OFFSET $offset`).all({ ...params, $limit: limit, $offset: offset });
+  const sessions = db.prepare(`SELECT * FROM sessions WHERE ${whereClause} ORDER BY ${orderBy} LIMIT ? OFFSET ?`).all(...params, limit, offset);
 
   return { sessions, pagination: { page, limit, total, totalPages: Math.ceil(total / limit) } };
 }
@@ -147,7 +148,7 @@ function deleteSession(sessionId) {
 // ═══════════════════════════════════════
 
 function getStats() {
-  const today = new Date().toISOString().slice(0, 10);
+  const today = toKSTDate();
 
   const overview = db.prepare(`
     SELECT
@@ -181,8 +182,8 @@ function getStats() {
 }
 
 function getDailyStats(from, to) {
-  const dateFrom = from || new Date(Date.now() - 30 * 86400000).toISOString().slice(0, 10);
-  const dateTo = to || new Date().toISOString().slice(0, 10);
+  const dateFrom = from || (() => { const d = new Date(Date.now() + 9*3600000); d.setDate(d.getDate()-30); return d.toISOString().slice(0,10); })();
+  const dateTo = to || toKSTDate();
 
   const daily = db.prepare(`
     SELECT date(started_at) as date, COUNT(*) as sessions, SUM(message_count) as messages,
@@ -245,8 +246,8 @@ function getQualityTrend(days = 14) {
 function trackKeyword(word, category) {
   db.prepare(`
     INSERT INTO keywords (word, count, category, last_seen)
-    VALUES (?, 1, ?, datetime('now'))
-    ON CONFLICT(word) DO UPDATE SET count = count + 1, last_seen = datetime('now')
+    VALUES (?, 1, ?, datetime('now','+9 hours'))
+    ON CONFLICT(word) DO UPDATE SET count = count + 1, last_seen = datetime('now','+9 hours')
   `).run(word, category);
 }
 
@@ -283,7 +284,7 @@ function getCachedResponse(queryKey) {
 function setCachedResponse(queryKey, reply, category) {
   db.prepare(`
     INSERT OR REPLACE INTO response_cache (query_key, reply, category, created_at)
-    VALUES (?, ?, ?, datetime('now'))
+    VALUES (?, ?, ?, datetime('now','+9 hours'))
   `).run(queryKey, reply, category);
 }
 
@@ -349,9 +350,44 @@ function exportSessions({ format = 'json', from, to, category } = {}) {
   if (format === 'csv') {
     const header = 'session_id,timestamp,role,content,category,source,response_ms,quality_score,feedback';
     const lines = rows.map(r => `"${r.session_id}","${r.timestamp}","${r.role}","${r.content.replace(/"/g, '""').replace(/\n/g, ' ')}","${r.category}","${r.source || ''}","${r.response_ms}","${r.quality_score}","${r.feedback || ''}"`);
-    return { data: header + '\n' + lines.join('\n'), contentType: 'text/csv', filename: `export_${new Date().toISOString().slice(0,10)}.csv` };
+    return { data: header + '\n' + lines.join('\n'), contentType: 'text/csv', filename: `export_${toKSTDate()}.csv` };
   }
-  return { data: JSON.stringify(rows, null, 2), contentType: 'application/json', filename: `export_${new Date().toISOString().slice(0,10)}.json` };
+  return { data: JSON.stringify(rows, null, 2), contentType: 'application/json', filename: `export_${toKSTDate()}.json` };
+}
+
+// ─── 응답 수정 (관리자 즉시 조치) ───
+function correctResponse(messageId, correctedReply) {
+  // 1. 봇 메시지 내용 수정 + 품질 100으로
+  db.prepare('UPDATE messages SET content = ?, quality_score = 100, source = ? WHERE id = ?')
+    .run(correctedReply, 'admin_corrected', messageId);
+
+  // 2. 원본 사용자 질문 찾기
+  const botMsg = db.prepare('SELECT session_id, timestamp FROM messages WHERE id = ?').get(messageId);
+  if (!botMsg) return null;
+
+  const userMsg = db.prepare(
+    "SELECT content, category FROM messages WHERE session_id = ? AND role = 'user' AND timestamp < ? ORDER BY timestamp DESC LIMIT 1"
+  ).get(botMsg.session_id, botMsg.timestamp);
+
+  if (!userMsg) return null;
+
+  // 3. 캐시에 수정된 답변 저장 (즉시 반영)
+  const queryKey = userMsg.content.replace(/[?？！!~.,\s]+/g, ' ').trim().toLowerCase().replace(/\s+/g, ' ');
+  setCachedResponse(queryKey, correctedReply, userMsg.category || 'general');
+
+  // 4. 세션 품질 재계산
+  const sid = botMsg.session_id;
+  db.prepare(`UPDATE sessions SET avg_quality = COALESCE((SELECT AVG(quality_score) FROM messages WHERE session_id = ? AND role = 'bot' AND quality_score > 0), 0) WHERE session_id = ?`)
+    .run(sid, sid);
+
+  return { messageId, userQuestion: userMsg.content, queryKey };
+}
+
+// 사용자 질문으로 캐시 직접 등록 (관리자가 답변 작성)
+function setAdminResponse(userQuestion, adminReply, category) {
+  const queryKey = userQuestion.replace(/[?？！!~.,\s]+/g, ' ').trim().toLowerCase().replace(/\s+/g, ' ');
+  setCachedResponse(queryKey, adminReply, category || 'general');
+  return { queryKey };
 }
 
 module.exports = {
@@ -361,5 +397,6 @@ module.exports = {
   trackKeyword, getKeywordStats,
   getCachedResponse, setCachedResponse, invalidateCache, getCacheStats,
   addUnresolvedItem, getUnresolvedQueue, resolveUnresolvedItem,
+  correctResponse, setAdminResponse,
   exportSessions
 };

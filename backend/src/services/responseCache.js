@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { toKSTString } = require('../utils/kst');
 
 const CACHE_PATH = path.join(__dirname, '..', 'data', 'response_cache.json');
 const KEYWORDS_PATH = path.join(__dirname, '..', 'data', 'keyword_stats.json');
@@ -53,7 +54,7 @@ function getCachedResponse(message) {
   // 1. 정확 매칭
   if (cache[normalized] && now - cache[normalized].createdAt < CACHE_TTL) {
     cache[normalized].hitCount++;
-    cache[normalized].lastHitAt = new Date().toISOString();
+    cache[normalized].lastHitAt = toKSTString();
     save();
     return { ...cache[normalized], source: 'cache_exact' };
   }
@@ -63,7 +64,7 @@ function getCachedResponse(message) {
     if (now - entry.createdAt > CACHE_TTL) continue;
     if (similarity(normalized, key) >= 0.8) {
       entry.hitCount++;
-      entry.lastHitAt = new Date().toISOString();
+      entry.lastHitAt = toKSTString();
       save();
       return { ...entry, source: 'cache_similar' };
     }
@@ -152,7 +153,7 @@ function extractKeywords(message) {
 
 function trackKeywords(message, category) {
   const keywords = extractKeywords(message);
-  const now = new Date().toISOString();
+  const now = toKSTString();
 
   keywords.forEach(({ word, category: kwCat }) => {
     if (!keywordStats[word]) {

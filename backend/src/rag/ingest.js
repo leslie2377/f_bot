@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const pdfParse = require('pdf-parse');
+const { toKSTString } = require('../utils/kst');
 const { Document } = require('@langchain/core/documents');
 const { RecursiveCharacterTextSplitter } = require('@langchain/textsplitters');
 const { FaissStore } = require('@langchain/community/vectorstores/faiss');
@@ -57,27 +58,37 @@ function loadProducts() {
   const products = JSON.parse(fs.readFileSync(prodPath, 'utf-8'));
 
   return products.map(p => {
-    const fee = p.monthlyFee;
-    const priceTag = fee <= 5000 ? '저가 초저가 가성비' : fee <= 15000 ? '중저가 가성비' : fee <= 30000 ? '중가' : fee <= 50000 ? '중고가' : '고가 프리미엄';
+    const selling = p.sellingPrice || p.monthlyFee || 0;
+    const priceTag = selling <= 5000 ? '저가 초저가 가성비' : selling <= 15000 ? '중저가 가성비' : selling <= 30000 ? '중가' : selling <= 50000 ? '중고가' : '고가 프리미엄';
     const dataNum = parseInt(p.data) || 0;
     const dataTag = (p.data || '').includes('무제한') ? '무제한 데이터무제한' : dataNum >= 100 ? '대용량 100GB이상' : dataNum >= 20 ? '대용량' : dataNum >= 10 ? '중용량' : '소용량';
-    const voiceTag = (p.voice || '').includes('무제한') || (p.voice || '').includes('기본제공') ? '무제한통화' : '';
+    const voiceRaw = p.voiceRaw || p.voice || '';
+    const voiceTag = voiceRaw === '기본제공' ? '기본제공' : voiceRaw;
+    const smsRaw = p.smsRaw || p.sms || '';
+    const smsTag = smsRaw === '기본제공' ? '기본제공' : smsRaw;
     const features = (p.features || []).join(' ');
-    // 브랜드명 추출 및 강화 (CGV, 다이소, 하나은행 등)
     const name = p.name || '';
     const brandMatches = name.match(/(CGV|다이소|올리브영|하나은행|신한카드|CU|NH|밀리의서재|예스24|멜론|SEEZN|글로벌)/gi) || [];
     const brandTag = brandMatches.length > 0 ? brandMatches.map(b => `${b} ${b} 제휴 ${b}요금제`).join(' ') : '';
 
+    // 가격 안내 문구
+    let priceInfo = `판매가(월): ${selling.toLocaleString()}원`;
+    if (p.hasDiscount && p.discountMonths) {
+      priceInfo += ` (${p.discountMonths}개월 할인)`;
+      const after = p.afterDiscountPrice || p.originalPrice || selling;
+      priceInfo += `\n${p.discountMonths}개월 후: 월 ${after.toLocaleString()}원`;
+    }
+
     return new Document({
       pageContent: [
-        `프리티 요금제: ${p.name}`,
+        `프리티 요금제: ${name}`,
         `통신망: ${p.network} 알뜰폰 요금제`,
-        `월요금: ${p.monthlyFee.toLocaleString()}원${p.originalFee ? ` (정가: ${p.originalFee.toLocaleString()}원, 할인)` : ''}`,
+        priceInfo,
         `데이터: ${p.data} ${dataTag}`,
-        `통화: ${p.voice} ${voiceTag}`,
-        `문자: ${p.sms}`,
+        `통화: ${voiceTag}`,
+        `문자: ${smsTag}`,
         `가격대: ${priceTag}`,
-        p.promo ? `프로모션 할인 요금제 (${p.promoEndDate || '진행중'})` : '정가 요금제',
+        p.hasDiscount ? `할인 요금제 (${p.discountMonths}개월 할인)` : '정가 요금제',
         p.partner ? `제휴: ${p.partner} 제휴 요금제 제휴혜택 ${p.partner}요금제` : '',
         brandTag ? `브랜드: ${brandTag}` : '',
         features ? `특징: ${features}` : '',
@@ -238,7 +249,7 @@ async function ingestAll() {
     terms: termsDocs.length,
     pdf: pdfDocs.length,
     vectorDir: VECTOR_DIR,
-    createdAt: new Date().toISOString()
+    createdAt: toKSTString()
   };
 
   fs.writeFileSync(path.join(VECTOR_DIR, 'stats.json'), JSON.stringify(stats, null, 2));
@@ -309,7 +320,7 @@ async function addDocuments(docs) {
     const key = type === 'product' ? 'products' : type;
     stats[key] = (stats[key] || 0) + 1;
   });
-  stats.lastUpdated = new Date().toISOString();
+  stats.lastUpdated = toKSTString();
   fs.writeFileSync(statsPath, JSON.stringify(stats, null, 2));
 
   return { added: docs.length, stats };
@@ -318,7 +329,7 @@ async function addDocuments(docs) {
 // ─── JSON 원본에 반영 ───
 function addToSourceJson(type, content) {
   const id = `manual_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`;
-  const now = new Date().toISOString();
+  const now = toKSTString();
 
   if (type === 'faq') {
     const faqPath = path.join(DATA_DIR, 'faq.json');
