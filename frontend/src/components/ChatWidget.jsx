@@ -5,7 +5,7 @@ import '../styles/chat.css';
 function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState('');
-  const { messages, isLoading, sendMessage } = useChat();
+  const { messages, isLoading, sendMessage, sendFeedback } = useChat();
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -50,8 +50,24 @@ function ChatWidget() {
             {messages.map((msg, idx) => (
               <div key={idx} className={`chat-message ${msg.role}`}>
                 {msg.role === 'bot' && <div className="bot-avatar">🤖</div>}
-                <div className={`message-bubble ${msg.role}`}>
-                  <MessageContent content={msg.content} />
+                <div className="message-bubble-wrap">
+                  <div className={`message-bubble ${msg.role}`}>
+                    <MessageContent content={msg.content} />
+                  </div>
+                  {msg.role === 'bot' && msg.messageId && (
+                    <div className="feedback-buttons">
+                      <button
+                        className={`feedback-btn ${msg.feedback === 'good' ? 'active' : ''}`}
+                        onClick={() => sendFeedback(msg.messageId, 'good')}
+                        disabled={!!msg.feedback}
+                      >👍</button>
+                      <button
+                        className={`feedback-btn ${msg.feedback === 'bad' ? 'active bad' : ''}`}
+                        onClick={() => sendFeedback(msg.messageId, 'bad')}
+                        disabled={!!msg.feedback}
+                      >👎</button>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

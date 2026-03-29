@@ -56,30 +56,55 @@ function loadProducts() {
   const prodPath = path.join(DATA_DIR, 'products.json');
   const products = JSON.parse(fs.readFileSync(prodPath, 'utf-8'));
 
-  return products.map(p => new Document({
-    pageContent: [
-      `요금제: ${p.name}`,
-      `통신망: ${p.network}`,
-      `월요금: ${p.monthlyFee}원${p.originalFee ? ` (정가: ${p.originalFee}원)` : ''}`,
-      `데이터: ${p.data}`,
-      `통화: ${p.voice}`,
-      `문자: ${p.sms}`,
-      p.promo ? `프로모션: ${p.promoEndDate || '진행중'}` : '',
-      p.partner ? `제휴: ${p.partner}` : '',
-      p.detailUrl ? `상세: ${p.detailUrl}` : '',
-      p.openUrl ? `개통: ${p.openUrl}` : '',
-    ].filter(Boolean).join('\n'),
-    metadata: {
-      source: 'product',
-      type: 'product',
-      id: p.id,
-      name: p.name,
-      network: p.network,
-      monthlyFee: p.monthlyFee,
-      detailUrl: p.detailUrl || '',
-      svcCd: p.svcCd || ''
-    }
-  }));
+  return products.map(p => {
+    const fee = p.monthlyFee;
+    const priceTag = fee <= 5000 ? '저가 초저가 가성비' : fee <= 15000 ? '중저가 가성비' : fee <= 30000 ? '중가' : fee <= 50000 ? '중고가' : '고가 프리미엄';
+    const dataNum = parseInt(p.data) || 0;
+    const dataTag = (p.data || '').includes('무제한') ? '무제한 데이터무제한' : dataNum >= 100 ? '대용량 100GB이상' : dataNum >= 20 ? '대용량' : dataNum >= 10 ? '중용량' : '소용량';
+    const voiceTag = (p.voice || '').includes('무제한') || (p.voice || '').includes('기본제공') ? '무제한통화' : '';
+    const features = (p.features || []).join(' ');
+    // 브랜드명 추출 및 강화 (CGV, 다이소, 하나은행 등)
+    const name = p.name || '';
+    const brandMatches = name.match(/(CGV|다이소|올리브영|하나은행|신한카드|CU|NH|밀리의서재|예스24|멜론|SEEZN|글로벌)/gi) || [];
+    const brandTag = brandMatches.length > 0 ? brandMatches.map(b => `${b} ${b} 제휴 ${b}요금제`).join(' ') : '';
+
+    return new Document({
+      pageContent: [
+        `프리티 요금제: ${p.name}`,
+        `통신망: ${p.network} 알뜰폰 요금제`,
+        `월요금: ${p.monthlyFee.toLocaleString()}원${p.originalFee ? ` (정가: ${p.originalFee.toLocaleString()}원, 할인)` : ''}`,
+        `데이터: ${p.data} ${dataTag}`,
+        `통화: ${p.voice} ${voiceTag}`,
+        `문자: ${p.sms}`,
+        `가격대: ${priceTag}`,
+        p.promo ? `프로모션 할인 요금제 (${p.promoEndDate || '진행중'})` : '정가 요금제',
+        p.partner ? `제휴: ${p.partner} 제휴 요금제 제휴혜택 ${p.partner}요금제` : '',
+        brandTag ? `브랜드: ${brandTag}` : '',
+        features ? `특징: ${features}` : '',
+        (p.categories && p.categories.length > 0) ? `카테고리: ${p.categories.join(', ')} ${p.categories.join(' ')}` : '',
+        p.genCd === '5G' ? '5G 요금제 5세대' : 'LTE 요금제 4G',
+        p.esimYn === 'Y' ? 'eSIM 가능 이심' : '',
+        p.selfYn === 'Y' ? '셀프개통 가능' : '',
+        `상세보기: ${p.detailUrl}`,
+        `개통신청: ${p.openUrl}`,
+      ].filter(Boolean).join('\n'),
+      metadata: {
+        source: 'product',
+        type: 'product',
+        id: p.id,
+        name: p.name,
+        network: p.network,
+        monthlyFee: p.monthlyFee,
+        data: p.data,
+        voice: p.voice,
+        sms: p.sms,
+        detailUrl: p.detailUrl || '',
+        svcCd: p.svcCd || '',
+        categories: (p.categories || []).join(','),
+        genCd: p.genCd || 'LTE'
+      }
+    });
+  });
 }
 
 // ─── 개통 가이드 로더 ───

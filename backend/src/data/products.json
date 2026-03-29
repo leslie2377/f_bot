@@ -16,7 +16,17 @@
     ],
     "svcCd": "FTDP304",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP304",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "CGV 영화 구독",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_002",
@@ -35,7 +45,16 @@
     ],
     "svcCd": "FTDP298",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP298",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S,N",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_003",
@@ -54,7 +73,16 @@
     ],
     "svcCd": "FTDP299",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP299",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S,N",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_004",
@@ -73,7 +101,16 @@
     ],
     "svcCd": "FTDP295",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP295",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_005",
@@ -92,7 +129,16 @@
     ],
     "svcCd": "FTDP294",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP294",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_006",
@@ -111,7 +157,16 @@
     ],
     "svcCd": "FTDP288",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP288",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_007",
@@ -130,7 +185,16 @@
     ],
     "svcCd": "FTDP213",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP213",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_008",
@@ -149,7 +213,18 @@
     ],
     "svcCd": "DDH15G_1M",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DDH15G_1M",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가",
+      "데이터 무제한",
+      "더빠른 5G"
+    ],
+    "tagInfo": "R,S,N",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
     "id": "plan_009",
@@ -168,7 +243,15 @@
     ],
     "svcCd": "PC0SB00272",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00272",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_010",
@@ -187,16 +270,24 @@
     ],
     "svcCd": "PC0SB00271",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00271",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
     "id": "plan_011",
-    "name": "더든든한200분15G",
+    "name": "더든든한500분15G",
     "network": "SKT",
-    "monthlyFee": 41000,
+    "monthlyFee": 45000,
     "originalFee": null,
     "data": "월15GB",
-    "voice": "200분",
+    "voice": "500분",
     "sms": "100건",
     "promo": false,
     "promoEndDate": null,
@@ -204,9 +295,19 @@
     "features": [
       "LTE"
     ],
-    "svcCd": "PC0SB00173",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00173",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "svcCd": "PC0SB00175",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00175",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_012",
@@ -225,16 +326,26 @@
     ],
     "svcCd": "PC0SB00178",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00178",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_013",
-    "name": "더든든한500분15G",
+    "name": "더든든한200분15G",
     "network": "SKT",
-    "monthlyFee": 45000,
+    "monthlyFee": 41000,
     "originalFee": null,
     "data": "월15GB",
-    "voice": "500분",
+    "voice": "200분",
     "sms": "100건",
     "promo": false,
     "promoEndDate": null,
@@ -242,9 +353,19 @@
     "features": [
       "LTE"
     ],
-    "svcCd": "PC0SB00175",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00175",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "svcCd": "PC0SB00173",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00173",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_014",
@@ -263,7 +384,17 @@
     ],
     "svcCd": "SH_DAS15G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=SH_DAS15G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "U+ 인터넷결합",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_015",
@@ -282,7 +413,16 @@
     ],
     "svcCd": "SH_DFREE7G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=SH_DFREE7G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_016",
@@ -301,29 +441,19 @@
     ],
     "svcCd": "DA100M10G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DA100M10G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_017",
-    "name": "음성기본데이터10G",
-    "network": "SKT",
-    "monthlyFee": 34100,
-    "originalFee": null,
-    "data": "월10GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00134",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00134",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_018",
     "name": "음성기본데이터5G",
     "network": "SKT",
     "monthlyFee": 27500,
@@ -339,10 +469,20 @@
     ],
     "svcCd": "PC0SB00136",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00136",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_019",
+    "id": "plan_018",
     "name": "음성기본데이터7G",
     "network": "SKT",
     "monthlyFee": 30800,
@@ -358,7 +498,45 @@
     ],
     "svcCd": "PC0SB00135",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00135",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_019",
+    "name": "음성기본데이터10G",
+    "network": "SKT",
+    "monthlyFee": 34100,
+    "originalFee": null,
+    "data": "월10GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00134",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00134",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_020",
@@ -377,7 +555,16 @@
     ],
     "svcCd": "ANSIM45_1",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=ANSIM45_1",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_021",
@@ -396,7 +583,16 @@
     ],
     "svcCd": "PC0SB00130",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00130",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_022",
@@ -415,7 +611,17 @@
     ],
     "svcCd": "PC0SB00133",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00133",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_023",
@@ -434,7 +640,16 @@
     ],
     "svcCd": "DDH350B5G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DDH350B5G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_024",
@@ -453,7 +668,16 @@
     ],
     "svcCd": "FTDP117",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP117",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_025",
@@ -472,7 +696,17 @@
     ],
     "svcCd": "PC0SB00286",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00286",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "하나은행 제휴",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_026",
@@ -491,7 +725,16 @@
     ],
     "svcCd": "FTDP301",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP301",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_027",
@@ -510,7 +753,16 @@
     ],
     "svcCd": "PC0SB00270",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00270",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "NH 제휴"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_028",
@@ -529,7 +781,16 @@
     ],
     "svcCd": "FTDP296",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP296",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S,N",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_029",
@@ -548,7 +809,16 @@
     ],
     "svcCd": "FTDP293",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP293",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_030",
@@ -567,7 +837,17 @@
     ],
     "svcCd": "PC0SB00267",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00267",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "하나은행 제휴",
+      "더빠른 5G"
+    ],
+    "tagInfo": "S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
     "id": "plan_031",
@@ -586,7 +866,17 @@
     ],
     "svcCd": "PC0SB00268",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00268",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "하나은행 제휴",
+      "더빠른 5G"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
     "id": "plan_032",
@@ -605,7 +895,16 @@
     ],
     "svcCd": "FTDP291",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP291",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_033",
@@ -624,7 +923,17 @@
     ],
     "svcCd": "PC0SB00255",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00255",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "CGV 영화 구독",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_034",
@@ -643,7 +952,17 @@
     ],
     "svcCd": "PC0SB00258",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00258",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "CGV 영화 구독",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_035",
@@ -662,7 +981,17 @@
     ],
     "svcCd": "PC0SB00257",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00257",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "CGV 영화 구독",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_036",
@@ -681,7 +1010,17 @@
     ],
     "svcCd": "PC0SB00256",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00256",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "CGV 영화 구독",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_037",
@@ -700,7 +1039,16 @@
     ],
     "svcCd": "FTDP265",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP265",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_038",
@@ -719,7 +1067,17 @@
     ],
     "svcCd": "PC0SB00213",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00213",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "하나은행 제휴",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_039",
@@ -738,7 +1096,17 @@
     ],
     "svcCd": "PC0SB00215",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00215",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "하나은행 제휴",
+      "데이터 무제한"
+    ],
+    "tagInfo": "S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_040",
@@ -757,67 +1125,20 @@
     ],
     "svcCd": "PC0SB00214",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00214",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "하나은행 제휴",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_041",
-    "name": "NH프리덤11G+",
-    "network": "SKT",
-    "monthlyFee": 49390,
-    "originalFee": null,
-    "data": "월11GB+매일2GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00205",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00205",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_042",
-    "name": "NH프리덤7G+1M",
-    "network": "SKT",
-    "monthlyFee": 29700,
-    "originalFee": null,
-    "data": "월7GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00206",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00206",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_043",
-    "name": "(5G)더빠른95G+",
-    "network": "LGU+",
-    "monthlyFee": 64900,
-    "originalFee": null,
-    "data": "월95GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "5G"
-    ],
-    "svcCd": "5GFAST95G",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=5GFAST95G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_044",
     "name": "더든든한500분15G",
     "network": "KT",
     "monthlyFee": 44000,
@@ -833,10 +1154,19 @@
     ],
     "svcCd": "FTDP214",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP214",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_045",
+    "id": "plan_042",
     "name": "든든한300분10G(신한카드)",
     "network": "LGU+",
     "monthlyFee": 34100,
@@ -852,10 +1182,19 @@
     ],
     "svcCd": "SH_D300B10",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=SH_D300B10",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_046",
+    "id": "plan_043",
     "name": "든든한200분10G(신한카드)",
     "network": "LGU+",
     "monthlyFee": 31900,
@@ -871,10 +1210,19 @@
     ],
     "svcCd": "SH_D200B10",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=SH_D200B10",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_047",
+    "id": "plan_044",
     "name": "든든한500분10G(신한카드)",
     "network": "LGU+",
     "monthlyFee": 37400,
@@ -890,10 +1238,19 @@
     ],
     "svcCd": "SH_D500B10",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=SH_D500B10",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_048",
+    "id": "plan_045",
     "name": "USIM데이터중심11G(신한카드)+",
     "network": "LGU+",
     "monthlyFee": 49390,
@@ -909,10 +1266,20 @@
     ],
     "svcCd": "SH_USIM11G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=SH_USIM11G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "U+ 인터넷결합",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_049",
+    "id": "plan_046",
     "name": "데이터팡팡매일5G(신한카드)+",
     "network": "LGU+",
     "monthlyFee": 56000,
@@ -928,10 +1295,20 @@
     ],
     "svcCd": "SH_DATAPP5",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=SH_DATAPP5",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "U+ 인터넷결합",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_050",
+    "id": "plan_047",
     "name": "5G 든든한200분5G",
     "network": "KT",
     "monthlyFee": 25300,
@@ -947,10 +1324,21 @@
     ],
     "svcCd": "FTDP149",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP149",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가",
+      "더빠른 5G",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
-    "id": "plan_051",
+    "id": "plan_048",
     "name": "든든한500분10G",
     "network": "LGU+",
     "monthlyFee": 37400,
@@ -966,10 +1354,19 @@
     ],
     "svcCd": "DDH500B10G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DDH500B10G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_052",
+    "id": "plan_049",
     "name": "든든한 200분6G",
     "network": "SKT",
     "monthlyFee": 25300,
@@ -985,10 +1382,20 @@
     ],
     "svcCd": "PC0SB00109",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00109",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_053",
+    "id": "plan_050",
     "name": "CGV 100G+",
     "network": "SKT",
     "monthlyFee": 66000,
@@ -1004,29 +1411,20 @@
     ],
     "svcCd": "PC0SB00254",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00254",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_054",
-    "name": "CGV 11G+",
-    "network": "SKT",
-    "monthlyFee": 65890,
-    "originalFee": null,
-    "data": "월11GB+매일2GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "CGV 영화 구독",
+      "데이터 무제한"
     ],
-    "svcCd": "PC0SB00240",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00240",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_055",
+    "id": "plan_051",
     "name": "CGV 7G+1M",
     "network": "SKT",
     "monthlyFee": 42900,
@@ -1042,10 +1440,49 @@
     ],
     "svcCd": "PC0SB00242",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00242",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "CGV 영화 구독",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_056",
+    "id": "plan_052",
+    "name": "CGV 11G+",
+    "network": "SKT",
+    "monthlyFee": 65890,
+    "originalFee": null,
+    "data": "월11GB+매일2GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00240",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00240",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "CGV 영화 구독",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_053",
     "name": "CGV 15G+",
     "network": "SKT",
     "monthlyFee": 59400,
@@ -1061,10 +1498,20 @@
     ],
     "svcCd": "PC0SB00241",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00241",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "CGV 영화 구독",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_057",
+    "id": "plan_054",
     "name": "5G 든든한200분7G",
     "network": "LGU+",
     "monthlyFee": 28600,
@@ -1080,10 +1527,21 @@
     ],
     "svcCd": "5GDDH200M7",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=5GDDH200M7",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가",
+      "더빠른 5G",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
-    "id": "plan_058",
+    "id": "plan_055",
     "name": "5G 든든한200분5G  ",
     "network": "LGU+",
     "monthlyFee": 25300,
@@ -1099,10 +1557,21 @@
     ],
     "svcCd": "5GDDH200M5",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=5GDDH200M5",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가",
+      "더빠른 5G",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
-    "id": "plan_059",
+    "id": "plan_056",
     "name": "프리티구독100G+5M(스타벅스금액권)",
     "network": "SKT",
     "monthlyFee": 62700,
@@ -1118,10 +1587,18 @@
     ],
     "svcCd": "PC0SB00276",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00276",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_060",
+    "id": "plan_057",
     "name": "프리티구독11G+3M(스타벅스금액권)",
     "network": "SKT",
     "monthlyFee": 55000,
@@ -1137,10 +1614,18 @@
     ],
     "svcCd": "PC0SB00275",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00275",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_061",
+    "id": "plan_058",
     "name": "프리티구독15G+3M(스타벅스금액권)",
     "network": "SKT",
     "monthlyFee": 47300,
@@ -1156,10 +1641,18 @@
     ],
     "svcCd": "PC0SB00274",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00274",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_062",
+    "id": "plan_059",
     "name": "프리티구독7G+1M(스타벅스금액권)",
     "network": "SKT",
     "monthlyFee": 39600,
@@ -1175,10 +1668,18 @@
     ],
     "svcCd": "PC0SB00273",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00273",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_063",
+    "id": "plan_060",
     "name": "프리티구독매일5G+5M(스타벅스금액권)",
     "network": "LGU+",
     "monthlyFee": 62700,
@@ -1194,10 +1695,18 @@
     ],
     "svcCd": "SB_5G5M",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=SB_5G5M",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_064",
+    "id": "plan_061",
     "name": "프리티구독11G+3M(스타벅스금액권)",
     "network": "LGU+",
     "monthlyFee": 55000,
@@ -1213,10 +1722,18 @@
     ],
     "svcCd": "SB_11G3M",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=SB_11G3M",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천"
+    ],
+    "tagInfo": "R,B,G",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_065",
+    "id": "plan_062",
     "name": "프리티구독15G+3M(스타벅스금액권)",
     "network": "LGU+",
     "monthlyFee": 47300,
@@ -1232,86 +1749,18 @@
     ],
     "svcCd": "SB_15G3M",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=SB_15G3M",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_066",
-    "name": "프리티구독7G+1M(스타벅스금액권)",
-    "network": "LGU+",
-    "monthlyFee": 39600,
-    "originalFee": null,
-    "data": "월7GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천"
     ],
-    "svcCd": "SB_7G1M",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=SB_7G1M",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "R,B,G",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_067",
-    "name": "NH올원프리덤100G+",
-    "network": "LGU+",
-    "monthlyFee": 55000,
-    "originalFee": null,
-    "data": "월100GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "EPA_M100G5",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=EPA_M100G5",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_068",
-    "name": "NH올원프리덤11G+",
-    "network": "LGU+",
-    "monthlyFee": 38500,
-    "originalFee": null,
-    "data": "월11GB+매일2GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "EPA_M11G3M",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=EPA_M11G3M",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_069",
-    "name": "NH올원프리덤7G+",
-    "network": "LGU+",
-    "monthlyFee": 29700,
-    "originalFee": null,
-    "data": "월7GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "EPA_M7G1M",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=EPA_M7G1M",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_070",
+    "id": "plan_063",
     "name": "NH더드림 안심+",
     "network": "LGU+",
     "monthlyFee": 22990,
@@ -1327,10 +1776,19 @@
     ],
     "svcCd": "EPA_VF",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=EPA_VF",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "NH 제휴"
+    ],
+    "tagInfo": "R,E,G",
+    "esimYn": "N",
+    "selfYn": "N",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_071",
+    "id": "plan_064",
     "name": "NH더드림 알뜰 2.2",
     "network": "SKT",
     "monthlyFee": 5100,
@@ -1346,10 +1804,19 @@
     ],
     "svcCd": "PC0SB00185",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00185",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "NH 제휴"
+    ],
+    "tagInfo": "R,E,G",
+    "esimYn": "N",
+    "selfYn": "N",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_072",
+    "id": "plan_065",
     "name": "(5G)더든든한500분15G",
     "network": "LGU+",
     "monthlyFee": 45000,
@@ -1365,10 +1832,21 @@
     ],
     "svcCd": "DDH5500M15",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DDH5500M15",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가",
+      "더빠른 5G",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
-    "id": "plan_073",
+    "id": "plan_066",
     "name": "유심프리티데이터중심11G+",
     "network": "LGU+",
     "monthlyFee": 49390,
@@ -1384,10 +1862,20 @@
     ],
     "svcCd": "UDATA11G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=UDATA11G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "U+ 인터넷결합",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_074",
+    "id": "plan_067",
     "name": "데이터팡팡매일5G+",
     "network": "LGU+",
     "monthlyFee": 56000,
@@ -1403,10 +1891,20 @@
     ],
     "svcCd": "DATAPP",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DATAPP",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "U+ 인터넷결합",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_075",
+    "id": "plan_068",
     "name": "프리티 글로벌통화 300 100G+",
     "network": "SKT",
     "monthlyFee": 66000,
@@ -1422,10 +1920,19 @@
     ],
     "svcCd": "PC0SB00287",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00287",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_076",
+    "id": "plan_069",
     "name": "프리티 글로벌통화 300 11G+",
     "network": "SKT",
     "monthlyFee": 65890,
@@ -1441,10 +1948,19 @@
     ],
     "svcCd": "PC0SB00288",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00288",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_077",
+    "id": "plan_070",
     "name": "프리티 글로벌통화 300 7G+",
     "network": "SKT",
     "monthlyFee": 39600,
@@ -1460,10 +1976,19 @@
     ],
     "svcCd": "PC0SB00289",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00289",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_078",
+    "id": "plan_071",
     "name": "더든든한500분30G",
     "network": "SKT",
     "monthlyFee": 64900,
@@ -1479,10 +2004,19 @@
     ],
     "svcCd": "PC0SB00285",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00285",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_079",
+    "id": "plan_072",
     "name": "더든든한200분30G",
     "network": "KT",
     "monthlyFee": 59400,
@@ -1498,29 +2032,19 @@
     ],
     "svcCd": "FTDP303",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP303",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_080",
-    "name": "(5G)다이소 200G+",
-    "network": "KT",
-    "monthlyFee": 77000,
-    "originalFee": null,
-    "data": "���200GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "5G"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "평생/장기 할인"
     ],
-    "svcCd": "FTDP300",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP300",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_081",
+    "id": "plan_073",
     "name": "(5G)올리브영 200G+",
     "network": "KT",
     "monthlyFee": 77000,
@@ -1536,29 +2060,21 @@
     ],
     "svcCd": "FTDP297",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP297",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_082",
-    "name": "예스24크레마클럽e북 구독 100G+",
-    "network": "KT",
-    "monthlyFee": 66000,
-    "originalFee": null,
-    "data": "월100GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한",
+      "더빠른 5G",
+      "평생/장기 할인"
     ],
-    "svcCd": "FTDP286",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP286",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
-    "id": "plan_083",
+    "id": "plan_074",
     "name": "예스24크레마클럽e북 구독 10G+",
     "network": "KT",
     "monthlyFee": 65890,
@@ -1574,10 +2090,47 @@
     ],
     "svcCd": "FTDP287",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP287",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_084",
+    "id": "plan_075",
+    "name": "예스24크레마클럽e북 구독 100G+",
+    "network": "KT",
+    "monthlyFee": 66000,
+    "originalFee": null,
+    "data": "월100GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP286",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP286",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_076",
     "name": "예스24크레마클럽e북 구독 일5G+",
     "network": "LGU+",
     "monthlyFee": 59400,
@@ -1593,10 +2146,19 @@
     ],
     "svcCd": "YES24_D5G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=YES24_D5G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_085",
+    "id": "plan_077",
     "name": "예스24크레마클럽e북 구독 11G+",
     "network": "LGU+",
     "monthlyFee": 65890,
@@ -1612,10 +2174,19 @@
     ],
     "svcCd": "YES24_11G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=YES24_11G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_086",
+    "id": "plan_078",
     "name": "예스24크레마클럽e북 구독 15G+",
     "network": "LGU+",
     "monthlyFee": 48400,
@@ -1631,10 +2202,19 @@
     ],
     "svcCd": "YES24_15G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=YES24_15G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_087",
+    "id": "plan_079",
     "name": "예스24크레마클럽e북 구독 7G+1M",
     "network": "LGU+",
     "monthlyFee": 36300,
@@ -1650,105 +2230,19 @@
     ],
     "svcCd": "YES24_7G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=YES24_7G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_088",
-    "name": "예스24크레마클럽e북 구독 100G+",
-    "network": "SKT",
-    "monthlyFee": 66000,
-    "originalFee": null,
-    "data": "월100GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
     ],
-    "svcCd": "PC0SB00248",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00248",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_089",
-    "name": "후후 안전통화생활 11G+",
-    "network": "SKT",
-    "monthlyFee": 65890,
-    "originalFee": null,
-    "data": "월11GB+매일2GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00253",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00253",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_090",
-    "name": "후후 안전통화생활 100G+",
-    "network": "SKT",
-    "monthlyFee": 55000,
-    "originalFee": null,
-    "data": "월100GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00252",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00252",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_091",
-    "name": "예스24크레마클럽e북 구독 7G+1M",
-    "network": "SKT",
-    "monthlyFee": 36300,
-    "originalFee": null,
-    "data": "월7GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00251",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00251",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_092",
-    "name": "예스24크레마클럽e북 구독 15G+",
-    "network": "SKT",
-    "monthlyFee": 48400,
-    "originalFee": null,
-    "data": "월15GB",
-    "voice": "100분",
-    "sms": "100건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00250",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00250",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_093",
+    "id": "plan_080",
     "name": "예스24크레마클럽e북 구독 11G+",
     "network": "SKT",
     "monthlyFee": 65890,
@@ -1764,29 +2258,102 @@
     ],
     "svcCd": "PC0SB00249",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00249",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_094",
-    "name": "(5G)더든든한500분30GB",
+    "id": "plan_081",
+    "name": "예스24크레마클럽e북 구독 15G+",
     "network": "SKT",
-    "monthlyFee": 64900,
+    "monthlyFee": 48400,
     "originalFee": null,
-    "data": "월30GB",
-    "voice": "500분",
+    "data": "월15GB",
+    "voice": "100분",
     "sms": "100건",
     "promo": false,
     "promoEndDate": null,
     "partner": null,
     "features": [
-      "5G"
+      "LTE"
     ],
-    "svcCd": "PC0SB00244",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00244",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "svcCd": "PC0SB00250",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00250",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,N",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_095",
+    "id": "plan_082",
+    "name": "예스24크레마클럽e북 구독 7G+1M",
+    "network": "SKT",
+    "monthlyFee": 36300,
+    "originalFee": null,
+    "data": "월7GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00251",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00251",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,N",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_083",
+    "name": "예스24크레마클럽e북 구독 100G+",
+    "network": "SKT",
+    "monthlyFee": 66000,
+    "originalFee": null,
+    "data": "월100GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00248",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00248",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_084",
     "name": "(5G)더든든한200분25GB",
     "network": "SKT",
     "monthlyFee": 55000,
@@ -1802,15 +2369,24 @@
     ],
     "svcCd": "PC0SB00247",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00247",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "더빠른 5G"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
-    "id": "plan_096",
-    "name": "(5G)더든든한500분25GB",
+    "id": "plan_085",
+    "name": "(5G)더든든한500분30GB",
     "network": "SKT",
-    "monthlyFee": 59400,
+    "monthlyFee": 64900,
     "originalFee": null,
-    "data": "월25GB",
+    "data": "월30GB",
     "voice": "500분",
     "sms": "100건",
     "promo": false,
@@ -1819,12 +2395,21 @@
     "features": [
       "5G"
     ],
-    "svcCd": "PC0SB00246",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00246",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "svcCd": "PC0SB00244",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00244",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "더빠른 5G"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
-    "id": "plan_097",
+    "id": "plan_086",
     "name": "(5G)더든든한200분30GB",
     "network": "SKT",
     "monthlyFee": 59400,
@@ -1840,67 +2425,47 @@
     ],
     "svcCd": "PC0SB00245",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00245",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "더빠른 5G"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
-    "id": "plan_098",
-    "name": "후후 안전통화생활 15G+1M",
-    "network": "LGU+",
-    "monthlyFee": 40700,
+    "id": "plan_087",
+    "name": "(5G)더든든한500분25GB",
+    "network": "SKT",
+    "monthlyFee": 59400,
     "originalFee": null,
-    "data": "월15GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
+    "data": "월25GB",
+    "voice": "500분",
+    "sms": "100건",
     "promo": false,
     "promoEndDate": null,
     "partner": null,
     "features": [
-      "LTE"
+      "5G"
     ],
-    "svcCd": "WHOWHO15G",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=WHOWHO15G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "svcCd": "PC0SB00246",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00246",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "더빠른 5G"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
-    "id": "plan_099",
-    "name": "후후 안전통화생활 10G+1M",
-    "network": "LGU+",
-    "monthlyFee": 38500,
-    "originalFee": null,
-    "data": "월10GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "WHOWHO10G",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=WHOWHO10G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_100",
-    "name": "KR Basic",
-    "network": "KT",
-    "monthlyFee": 3300,
-    "originalFee": null,
-    "data": "월0GB",
-    "voice": "0분",
-    "sms": "0건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "FTDP283",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP283",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_101",
+    "id": "plan_088",
     "name": "NH더드림 든든 9.9",
     "network": "SKT",
     "monthlyFee": 24200,
@@ -1916,48 +2481,19 @@
     ],
     "svcCd": "PC0SB00243",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00243",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_102",
-    "name": "CU+CGV 11G+",
-    "network": "KT",
-    "monthlyFee": 65890,
-    "originalFee": null,
-    "data": "월11GB+매일2GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "NH 제휴"
     ],
-    "svcCd": "FTDP277",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP277",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "R,S,G",
+    "esimYn": "N",
+    "selfYn": "N",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_103",
-    "name": "CU+CGV 100G+",
-    "network": "KT",
-    "monthlyFee": 66000,
-    "originalFee": null,
-    "data": "월100GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "FTDP279",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP279",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_104",
+    "id": "plan_089",
     "name": "CU+CGV 15G+",
     "network": "KT",
     "monthlyFee": 56100,
@@ -1973,10 +2509,80 @@
     ],
     "svcCd": "FTDP278",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP278",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "CGV 영화 구독",
+      "초특가",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_105",
+    "id": "plan_090",
+    "name": "CU+CGV 11G+",
+    "network": "KT",
+    "monthlyFee": 65890,
+    "originalFee": null,
+    "data": "월11GB+매일2GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP277",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP277",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "CGV 영화 구독",
+      "초특가",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_091",
+    "name": "CU+CGV 100G+",
+    "network": "KT",
+    "monthlyFee": 66000,
+    "originalFee": null,
+    "data": "월100GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP279",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP279",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "CGV 영화 구독",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_092",
     "name": "데이터안심15G(CU 멤버십)+1M",
     "network": "KT",
     "monthlyFee": 40700,
@@ -1992,10 +2598,19 @@
     ],
     "svcCd": "FTDP271",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP271",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_106",
+    "id": "plan_093",
     "name": "데이터100G(CU 멤버십)+",
     "network": "KT",
     "monthlyFee": 55000,
@@ -2011,10 +2626,19 @@
     ],
     "svcCd": "FTDP264",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP264",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_107",
+    "id": "plan_094",
     "name": "데이터안심15G(CU 멤버십)+",
     "network": "KT",
     "monthlyFee": 56100,
@@ -2030,67 +2654,19 @@
     ],
     "svcCd": "FTDP268",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP268",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_108",
-    "name": "보이스피싱 안���보상11G+",
-    "network": "KT",
-    "monthlyFee": 65890,
-    "originalFee": null,
-    "data": "월11GB+매일2GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
     ],
-    "svcCd": "FTDP266",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP266",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_109",
-    "name": "보이스피싱 안심보상7G+1M",
-    "network": "KT",
-    "monthlyFee": 35750,
-    "originalFee": null,
-    "data": "월7GB+추가10GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "FTDP269",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP269",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_110",
-    "name": "보이스피싱 안심보상15G+1M",
-    "network": "KT",
-    "monthlyFee": 40700,
-    "originalFee": null,
-    "data": "월15GB+추가10GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "FTDP267",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP267",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_111",
+    "id": "plan_095",
     "name": "프리티데이터매일5G+",
     "network": "LGU+",
     "monthlyFee": 55000,
@@ -2106,29 +2682,20 @@
     ],
     "svcCd": "FTDE5G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDE5G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_112",
-    "name": "프리티데이터100분15G+",
-    "network": "LGU+",
-    "monthlyFee": 41800,
-    "originalFee": null,
-    "data": "월15GB",
-    "voice": "100분",
-    "sms": "100건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "U+ 인터넷결합",
+      "데이터 무제한"
     ],
-    "svcCd": "FTD100M15G",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTD100M15G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_113",
+    "id": "plan_096",
     "name": "프리티데이터7G+1M",
     "network": "LGU+",
     "monthlyFee": 29700,
@@ -2144,10 +2711,47 @@
     ],
     "svcCd": "FTD7G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTD7G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_114",
+    "id": "plan_097",
+    "name": "프리티데이터100분15G+",
+    "network": "LGU+",
+    "monthlyFee": 41800,
+    "originalFee": null,
+    "data": "월15GB",
+    "voice": "100분",
+    "sms": "100건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTD100M15G",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTD100M15G",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_098",
     "name": "프리티데이터10G+1M",
     "network": "LGU+",
     "monthlyFee": 37400,
@@ -2163,10 +2767,19 @@
     ],
     "svcCd": "FTD10G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTD10G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_115",
+    "id": "plan_099",
     "name": "데이터안심15G+1M",
     "network": "LGU+",
     "monthlyFee": 40700,
@@ -2182,10 +2795,19 @@
     ],
     "svcCd": "DAS_15G1M",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DAS_15G1M",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_116",
+    "id": "plan_100",
     "name": "데이터안심10G+1M",
     "network": "LGU+",
     "monthlyFee": 38500,
@@ -2201,10 +2823,19 @@
     ],
     "svcCd": "DAS_10G1M",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DAS_10G1M",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_117",
+    "id": "plan_101",
     "name": "데이터안심15G(밀리의서재)+",
     "network": "KT",
     "monthlyFee": 56100,
@@ -2220,48 +2851,19 @@
     ],
     "svcCd": "FTDP247",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP247",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_118",
-    "name": "프리티데이터100G(모바일한경)+",
-    "network": "KT",
-    "monthlyFee": 55000,
-    "originalFee": null,
-    "data": "월100GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
     ],
-    "svcCd": "FTDP250",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP250",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_119",
-    "name": "데이터안심15G(모바일한경)+1M",
-    "network": "KT",
-    "monthlyFee": 39600,
-    "originalFee": null,
-    "data": "월15GB+추가10GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "FTDP249",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP249",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_120",
+    "id": "plan_102",
     "name": "데이터100G(밀리의서재)+",
     "network": "KT",
     "monthlyFee": 55000,
@@ -2277,10 +2879,19 @@
     ],
     "svcCd": "FTDP239",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP239",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_121",
+    "id": "plan_103",
     "name": "음성기본7G(밀리의서재)+1M",
     "network": "KT",
     "monthlyFee": 35750,
@@ -2296,10 +2907,19 @@
     ],
     "svcCd": "FTDP240",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP240",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_122",
+    "id": "plan_104",
     "name": "데이터안심300분15G+",
     "network": "LGU+",
     "monthlyFee": 46200,
@@ -2315,48 +2935,19 @@
     ],
     "svcCd": "DA300M15GP",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DA300M15GP",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_123",
-    "name": "(5G)더빠른99G+1M",
-    "network": "SKT",
-    "monthlyFee": 67100,
-    "originalFee": null,
-    "data": "월99GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "5G"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
     ],
-    "svcCd": "PC0SB00195",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00195",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_124",
-    "name": "(5G)더빠른54G+1M",
-    "network": "SKT",
-    "monthlyFee": 63800,
-    "originalFee": null,
-    "data": "월54GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "5G"
-    ],
-    "svcCd": "PC0SB00197",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00197",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_125",
+    "id": "plan_105",
     "name": "USIM데이터11G(밀리의서재)+",
     "network": "KT",
     "monthlyFee": 65890,
@@ -2372,124 +2963,19 @@
     ],
     "svcCd": "FTDP234",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP234",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_126",
-    "name": "프리미엄데이터100G+",
-    "network": "SKT",
-    "monthlyFee": 53000,
-    "originalFee": null,
-    "data": "월100GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
     ],
-    "svcCd": "PC0SB00198",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00198",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_127",
-    "name": "프리미엄데이터7G+1M",
-    "network": "SKT",
-    "monthlyFee": 29700,
-    "originalFee": null,
-    "data": "월7GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00202",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00202",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_128",
-    "name": "프리미엄데이터100분15G+",
-    "network": "SKT",
-    "monthlyFee": 41800,
-    "originalFee": null,
-    "data": "월15GB",
-    "voice": "100분",
-    "sms": "100건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00201",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00201",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_129",
-    "name": "프리미엄데이터11G+",
-    "network": "SKT",
-    "monthlyFee": 49390,
-    "originalFee": null,
-    "data": "월11GB+매일2GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00199",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00199",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_130",
-    "name": "데이터안심10G+1M",
-    "network": "KT",
-    "monthlyFee": 37400,
-    "originalFee": null,
-    "data": "월10GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "FTDP235",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP235",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_131",
-    "name": "데이터안심15G+1M",
-    "network": "KT",
-    "monthlyFee": 39600,
-    "originalFee": null,
-    "data": "월15GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "FTDP236",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP236",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_132",
+    "id": "plan_106",
     "name": "데이터안심10G+1M",
     "network": "SKT",
     "monthlyFee": 38500,
@@ -2505,143 +2991,19 @@
     ],
     "svcCd": "PC0SB00189",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00189",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_133",
-    "name": "(5G)더빠른125G+",
-    "network": "LGU+",
-    "monthlyFee": 66000,
-    "originalFee": null,
-    "data": "월125GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "5G"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
     ],
-    "svcCd": "5GFAST125G",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=5GFAST125G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_134",
-    "name": "음성기본1G+1M",
-    "network": "SKT",
-    "monthlyFee": 22000,
-    "originalFee": null,
-    "data": "월1GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00186",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00186",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_135",
-    "name": "든든한300분5G(복지)",
-    "network": "LGU+",
-    "monthlyFee": 7700,
-    "originalFee": null,
-    "data": "월5GB",
-    "voice": "300분",
-    "sms": "300건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "DDH300M5G",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DDH300M5G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_136",
-    "name": "든든한300분5G(복지)",
-    "network": "SKT",
-    "monthlyFee": 7700,
-    "originalFee": null,
-    "data": "월5GB",
-    "voice": "300분",
-    "sms": "300건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00166",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00166",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_137",
-    "name": "든든한300분5G(복지)",
-    "network": "KT",
-    "monthlyFee": 7700,
-    "originalFee": null,
-    "data": "월5GB",
-    "voice": "300분",
-    "sms": "300건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "FTDP208",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP208",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_138",
-    "name": "(5G)더빠른110G+",
-    "network": "KT",
-    "monthlyFee": 66000,
-    "originalFee": null,
-    "data": "월110GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "5G"
-    ],
-    "svcCd": "FTDP209",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP209",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_139",
-    "name": "(5G)더빠른200G+",
-    "network": "KT",
-    "monthlyFee": 77000,
-    "originalFee": null,
-    "data": "월200GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "5G"
-    ],
-    "svcCd": "FTDP210",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP210",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_140",
+    "id": "plan_107",
     "name": "(5G)더든든한500분15G",
     "network": "SKT",
     "monthlyFee": 45000,
@@ -2657,10 +3019,19 @@
     ],
     "svcCd": "PC0SB00169",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00169",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "더빠른 5G"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
-    "id": "plan_141",
+    "id": "plan_108",
     "name": "(5G)더든든한500분20G",
     "network": "SKT",
     "monthlyFee": 55000,
@@ -2676,54 +3047,141 @@
     ],
     "svcCd": "PC0SB00172",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00172",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_142",
-    "name": "USIM데이터11G(pay쿠폰)+",
-    "network": "KT",
-    "monthlyFee": 65890,
-    "originalFee": null,
-    "data": "월11GB+매일2GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "더빠른 5G"
     ],
-    "svcCd": "FTDP197",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP197",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
-    "id": "plan_143",
-    "name": "USIM프리티데이터11G(멜론)+",
-    "network": "KT",
-    "monthlyFee": 65890,
-    "originalFee": null,
-    "data": "월11GB+매일2GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "FTDP200",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP200",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_144",
-    "name": "더든든한500분20G",
+    "id": "plan_109",
+    "name": "데이터안심무제한7G+",
     "network": "LGU+",
-    "monthlyFee": 55000,
+    "monthlyFee": 29700,
     "originalFee": null,
-    "data": "월20GB",
-    "voice": "500분",
+    "data": "월7GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "DAFREE7G",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DAFREE7G",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_110",
+    "name": "음성기본7G+1M",
+    "network": "SKT",
+    "monthlyFee": 29700,
+    "originalFee": null,
+    "data": "월7GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00152",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00152",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_111",
+    "name": "5G 든든한200분7G",
+    "network": "KT",
+    "monthlyFee": 28600,
+    "originalFee": null,
+    "data": "월7GB",
+    "voice": "200분",
+    "sms": "150건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "5G"
+    ],
+    "svcCd": "FTDP150",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP150",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가",
+      "더빠른 5G",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_112",
+    "name": "5G 든든한200분10G",
+    "network": "KT",
+    "monthlyFee": 31900,
+    "originalFee": null,
+    "data": "월10GB",
+    "voice": "200분",
+    "sms": "200건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "5G"
+    ],
+    "svcCd": "FTDP151",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP151",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "초특가",
+      "더빠른 5G",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_113",
+    "name": "든든한200분10G",
+    "network": "SKT",
+    "monthlyFee": 31900,
+    "originalFee": null,
+    "data": "월10GB",
+    "voice": "200분",
     "sms": "100건",
     "promo": false,
     "promoEndDate": null,
@@ -2731,12 +3189,221 @@
     "features": [
       "LTE"
     ],
-    "svcCd": "DDH500M20G",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DDH500M20G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "svcCd": "PC0SB00112",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00112",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_145",
+    "id": "plan_114",
+    "name": "프리티데이터안심15G+",
+    "network": "SKT",
+    "monthlyFee": 41800,
+    "originalFee": null,
+    "data": "월15GB",
+    "voice": "100분",
+    "sms": "100건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00107",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00107",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_115",
+    "name": "프리티데이터팡팡",
+    "network": "SKT",
+    "monthlyFee": 53000,
+    "originalFee": null,
+    "data": "월100GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00105",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00105",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_116",
+    "name": "데이터안심15G+",
+    "network": "LGU+",
+    "monthlyFee": 41800,
+    "originalFee": null,
+    "data": "월15GB",
+    "voice": "100분",
+    "sms": "100건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "DATASV15",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DATASV15",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "U+ 인터넷결합",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_117",
+    "name": "USIM데이터중심11G+",
+    "network": "SKT",
+    "monthlyFee": 49390,
+    "originalFee": null,
+    "data": "월11GB+매일2GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00087",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00087",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_118",
+    "name": "프리티데이터중심11G",
+    "network": "LGU+",
+    "monthlyFee": 64790,
+    "originalFee": null,
+    "data": "월11GB+매일2GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "DATA58",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DATA58",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "이달의 추천",
+      "U+ 인터넷결합",
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_119",
+    "name": "NH올원프리덤100G+",
+    "network": "LGU+",
+    "monthlyFee": 55000,
+    "originalFee": null,
+    "data": "월100GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "EPA_M100G5",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=EPA_M100G5",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "U+ 인터넷결합",
+      "데이터 무제한",
+      "NH 제휴"
+    ],
+    "tagInfo": "R,E",
+    "esimYn": "N",
+    "selfYn": "N",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_120",
+    "name": "NH올원프리덤11G+",
+    "network": "LGU+",
+    "monthlyFee": 38500,
+    "originalFee": null,
+    "data": "월11GB+매일2GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "EPA_M11G3M",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=EPA_M11G3M",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "U+ 인터넷결합",
+      "데이터 무제한",
+      "NH 제휴"
+    ],
+    "tagInfo": "R,E",
+    "esimYn": "N",
+    "selfYn": "N",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_121",
     "name": "USIM데이터11G(프리미엄한경)+",
     "network": "LGU+",
     "monthlyFee": 50600,
@@ -2752,11 +3419,324 @@
     ],
     "svcCd": "PHK_USIM11",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PHK_USIM11",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "U+ 인터넷결합",
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_146",
-    "name": "USIM프리티데이터선택11G(왓챠)+",
+    "id": "plan_122",
+    "name": "USIM데이터11G(모바일한경)+",
+    "network": "LGU+",
+    "monthlyFee": 47300,
+    "originalFee": null,
+    "data": "월11GB+매일2GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "HK_USIM11G",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=HK_USIM11G",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "U+ 인터넷결합",
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_123",
+    "name": "NH프리덤7G+1M",
+    "network": "SKT",
+    "monthlyFee": 29700,
+    "originalFee": null,
+    "data": "월7GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00206",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00206",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "초특가",
+      "NH 제휴"
+    ],
+    "tagInfo": "R,B,E,S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_124",
+    "name": "(5G)더빠른95G+",
+    "network": "LGU+",
+    "monthlyFee": 64900,
+    "originalFee": null,
+    "data": "월95GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "5G"
+    ],
+    "svcCd": "5GFAST95G",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=5GFAST95G",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한",
+      "더빠른 5G",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_125",
+    "name": "NH올원프리덤7G+",
+    "network": "LGU+",
+    "monthlyFee": 29700,
+    "originalFee": null,
+    "data": "월7GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "EPA_M7G1M",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=EPA_M7G1M",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한",
+      "NH 제휴"
+    ],
+    "tagInfo": "R,E",
+    "esimYn": "N",
+    "selfYn": "N",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_126",
+    "name": "(5G)다이소 200G+",
+    "network": "KT",
+    "monthlyFee": 77000,
+    "originalFee": null,
+    "data": "월200GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "5G"
+    ],
+    "svcCd": "FTDP300",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP300",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한",
+      "더빠른 5G",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_127",
+    "name": "후후 안전통화생활 11G+",
+    "network": "SKT",
+    "monthlyFee": 65890,
+    "originalFee": null,
+    "data": "월11GB+매일2GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00253",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00253",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_128",
+    "name": "후후 안전통화생활 100G+",
+    "network": "SKT",
+    "monthlyFee": 55000,
+    "originalFee": null,
+    "data": "월100GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00252",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00252",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_129",
+    "name": "후후 안전통화생활 15G+1M",
+    "network": "LGU+",
+    "monthlyFee": 40700,
+    "originalFee": null,
+    "data": "월15GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "WHOWHO15G",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=WHOWHO15G",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_130",
+    "name": "후후 안전통화생활 10G+1M",
+    "network": "LGU+",
+    "monthlyFee": 38500,
+    "originalFee": null,
+    "data": "월10GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "WHOWHO10G",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=WHOWHO10G",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_131",
+    "name": "보이스피싱 안심보상15G+1M",
+    "network": "KT",
+    "monthlyFee": 40700,
+    "originalFee": null,
+    "data": "월15GB+추가10GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP267",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP267",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "S",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_132",
+    "name": "보이스피싱 안심보상7G+1M",
+    "network": "KT",
+    "monthlyFee": 35750,
+    "originalFee": null,
+    "data": "월7GB+추가10GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP269",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP269",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_133",
+    "name": "보이스피싱 안심보상11G+",
     "network": "KT",
     "monthlyFee": 65890,
     "originalFee": null,
@@ -2769,12 +3749,355 @@
     "features": [
       "LTE"
     ],
-    "svcCd": "FTDP180",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP180",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "svcCd": "FTDP266",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP266",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_147",
+    "id": "plan_134",
+    "name": "데이터안심15G(모바일한경)+1M",
+    "network": "KT",
+    "monthlyFee": 39600,
+    "originalFee": null,
+    "data": "월15GB+추가10GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP249",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP249",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_135",
+    "name": "프리티데이터100G(모바일한경)+",
+    "network": "KT",
+    "monthlyFee": 55000,
+    "originalFee": null,
+    "data": "월100GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP250",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP250",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_136",
+    "name": "(5G)더빠른54G+1M",
+    "network": "SKT",
+    "monthlyFee": 63800,
+    "originalFee": null,
+    "data": "월54GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "5G"
+    ],
+    "svcCd": "PC0SB00197",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00197",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한",
+      "더빠른 5G",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_137",
+    "name": "(5G)더빠른99G+1M",
+    "network": "SKT",
+    "monthlyFee": 67100,
+    "originalFee": null,
+    "data": "월99GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "5G"
+    ],
+    "svcCd": "PC0SB00195",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00195",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한",
+      "더빠른 5G",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_138",
+    "name": "데이터안심15G+1M",
+    "network": "KT",
+    "monthlyFee": 39600,
+    "originalFee": null,
+    "data": "월15GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP236",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP236",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_139",
+    "name": "데이터안심10G+1M",
+    "network": "KT",
+    "monthlyFee": 37400,
+    "originalFee": null,
+    "data": "월10GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP235",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP235",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_140",
+    "name": "(5G)더빠른125G+",
+    "network": "LGU+",
+    "monthlyFee": 66000,
+    "originalFee": null,
+    "data": "월125GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "5G"
+    ],
+    "svcCd": "5GFAST125G",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=5GFAST125G",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한",
+      "더빠른 5G",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_141",
+    "name": "음성기본1G+1M",
+    "network": "SKT",
+    "monthlyFee": 22000,
+    "originalFee": null,
+    "data": "월1GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00186",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00186",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_142",
+    "name": "(5G)더빠른110G+",
+    "network": "KT",
+    "monthlyFee": 66000,
+    "originalFee": null,
+    "data": "월110GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "5G"
+    ],
+    "svcCd": "FTDP209",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP209",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한",
+      "더빠른 5G",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_143",
+    "name": "(5G)더빠른200G+",
+    "network": "KT",
+    "monthlyFee": 77000,
+    "originalFee": null,
+    "data": "월200GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "5G"
+    ],
+    "svcCd": "FTDP210",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP210",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한",
+      "더빠른 5G",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_144",
+    "name": "USIM데이터11G(pay쿠폰)+",
+    "network": "KT",
+    "monthlyFee": 65890,
+    "originalFee": null,
+    "data": "월11GB+매일2GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP197",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP197",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_145",
+    "name": "USIM프리티데이터11G(멜론)+",
+    "network": "KT",
+    "monthlyFee": 65890,
+    "originalFee": null,
+    "data": "월11GB+매일2GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP200",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP200",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_146",
     "name": "USIM프리티데이터11GB(genie뮤직)+",
     "network": "KT",
     "monthlyFee": 65890,
@@ -2790,7 +4113,42 @@
     ],
     "svcCd": "FTDP182",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP182",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_147",
+    "name": "USIM프리티데이터선택11G(왓챠)+",
+    "network": "KT",
+    "monthlyFee": 65890,
+    "originalFee": null,
+    "data": "월11GB+매일2GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP180",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP180",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_148",
@@ -2809,7 +4167,15 @@
     ],
     "svcCd": "PPDATA13G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PPDATA13G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "B",
+    "esimYn": "N",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "선불"
   },
   {
     "id": "plan_149",
@@ -2828,48 +4194,19 @@
     ],
     "svcCd": "DAFREE6G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DAFREE6G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한",
+      "평생/장기 할인"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_150",
-    "name": "데이터안심무제한7G+",
-    "network": "LGU+",
-    "monthlyFee": 29700,
-    "originalFee": null,
-    "data": "월7GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "DAFREE7G",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DAFREE7G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_151",
-    "name": "음성기본7G+1M",
-    "network": "SKT",
-    "monthlyFee": 29700,
-    "originalFee": null,
-    "data": "월7GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00152",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00152",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_152",
     "name": "USIM데이터10G(모바일한경)+",
     "network": "KT",
     "monthlyFee": 47300,
@@ -2885,29 +4222,18 @@
     ],
     "svcCd": "FTDP166",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP166",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_153",
-    "name": "USIM데이터11G(모바일한경)+",
-    "network": "LGU+",
-    "monthlyFee": 47300,
-    "originalFee": null,
-    "data": "월11GB+매일2GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
     ],
-    "svcCd": "HK_USIM11G",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=HK_USIM11G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_154",
+    "id": "plan_151",
     "name": "5G더빠른150G",
     "network": "LGU+",
     "monthlyFee": 70000,
@@ -2923,143 +4249,20 @@
     ],
     "svcCd": "5GFAST150G",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=5GFAST150G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_155",
-    "name": "이마트24_Star",
-    "network": "LGU+",
-    "monthlyFee": 38500,
-    "originalFee": null,
-    "data": "월11GB+매일2GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한",
+      "더빠른 5G",
+      "평생/장기 할인"
     ],
-    "svcCd": "E24_UNLMT",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=E24_UNLMT",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
-    "id": "plan_156",
-    "name": "이마트24_Grande+",
-    "network": "LGU+",
-    "monthlyFee": 15400,
-    "originalFee": null,
-    "data": "월5GB",
-    "voice": "240분",
-    "sms": "240건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "E24_GRANDP",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=E24_GRANDP",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_157",
-    "name": "이마트24_Tall+",
-    "network": "LGU+",
-    "monthlyFee": 11000,
-    "originalFee": null,
-    "data": "월2.4GB",
-    "voice": "240분",
-    "sms": "240건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "E24_TALLP",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=E24_TALLP",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_158",
-    "name": "이마트24_Short+",
-    "network": "LGU+",
-    "monthlyFee": 7700,
-    "originalFee": null,
-    "data": "월1GB",
-    "voice": "50분",
-    "sms": "50건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "E24_SHORTP",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=E24_SHORTP",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_159",
-    "name": "5G 든든한200분7G",
-    "network": "KT",
-    "monthlyFee": 28600,
-    "originalFee": null,
-    "data": "월7GB",
-    "voice": "200분",
-    "sms": "150건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "5G"
-    ],
-    "svcCd": "FTDP150",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP150",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_160",
-    "name": "5G 든든한200분10G",
-    "network": "KT",
-    "monthlyFee": 31900,
-    "originalFee": null,
-    "data": "월10GB",
-    "voice": "200분",
-    "sms": "200건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "5G"
-    ],
-    "svcCd": "FTDP151",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP151",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_161",
-    "name": "선불데이터300MB+1Mbps",
-    "network": "LGU+",
-    "monthlyFee": 29700,
-    "originalFee": null,
-    "data": "월300MB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PPDATA3P1",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PPDATA3P1",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_162",
+    "id": "plan_152",
     "name": "선불 데이터 100G",
     "network": "SKT",
     "monthlyFee": 66000,
@@ -3075,10 +4278,18 @@
     ],
     "svcCd": "BAND_100",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=BAND_100",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B",
+    "esimYn": "N",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "선불"
   },
   {
-    "id": "plan_163",
+    "id": "plan_153",
     "name": "5G 더빠른200G+",
     "network": "SKT",
     "monthlyFee": 70000,
@@ -3094,29 +4305,20 @@
     ],
     "svcCd": "PC0SB00116",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00116",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_164",
-    "name": "든든한200분10G",
-    "network": "SKT",
-    "monthlyFee": 31900,
-    "originalFee": null,
-    "data": "월10GB",
-    "voice": "200분",
-    "sms": "100건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한",
+      "더빠른 5G",
+      "평생/장기 할인"
     ],
-    "svcCd": "PC0SB00112",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00112",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "5G",
+    "svcType": "후불"
   },
   {
-    "id": "plan_165",
+    "id": "plan_154",
     "name": "선불 데이터팡팡",
     "network": "KT",
     "monthlyFee": 66000,
@@ -3132,67 +4334,18 @@
     ],
     "svcCd": "FTDP124",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP124",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_166",
-    "name": "선불 데이터안심 2.5G",
-    "network": "KT",
-    "monthlyFee": 36000,
-    "originalFee": null,
-    "data": "월2.5GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
     ],
-    "svcCd": "FTDP126",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP126",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "R,B",
+    "esimYn": "N",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "선불"
   },
   {
-    "id": "plan_167",
-    "name": "프리티데이터팡팡",
-    "network": "SKT",
-    "monthlyFee": 53000,
-    "originalFee": null,
-    "data": "월100GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00105",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00105",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_168",
-    "name": "프리티데이터안심15G+",
-    "network": "SKT",
-    "monthlyFee": 41800,
-    "originalFee": null,
-    "data": "월15GB",
-    "voice": "100분",
-    "sms": "100건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00107",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00107",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_169",
+    "id": "plan_155",
     "name": "데이터안심15G+",
     "network": "KT",
     "monthlyFee": 41800,
@@ -3208,10 +4361,18 @@
     ],
     "svcCd": "FTDP121",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP121",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "R",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
-    "id": "plan_170",
+    "id": "plan_156",
     "name": "선불 데이터안심 300M",
     "network": "KT",
     "monthlyFee": 36000,
@@ -3227,67 +4388,18 @@
     ],
     "svcCd": "FTDP114",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP114",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_171",
-    "name": "이마트24_Venti",
-    "network": "LGU+",
-    "monthlyFee": 41800,
-    "originalFee": null,
-    "data": "월15GB",
-    "voice": "100분",
-    "sms": "100건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
     ],
-    "svcCd": "E24_VENTI",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=E24_VENTI",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "R,B",
+    "esimYn": "N",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "선불"
   },
   {
-    "id": "plan_172",
-    "name": "든든한데이터 20GB",
-    "network": "LGU+",
-    "monthlyFee": 18700,
-    "originalFee": null,
-    "data": "월20GB",
-    "voice": "0분",
-    "sms": "0건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "DDHDATA20G",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DDHDATA20G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_173",
-    "name": "든든한데이터 10GB",
-    "network": "LGU+",
-    "monthlyFee": 13200,
-    "originalFee": null,
-    "data": "월10GB",
-    "voice": "0분",
-    "sms": "0건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "DDHDATA10G",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DDHDATA10G",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_174",
+    "id": "plan_157",
     "name": "선불 데이터 11G",
     "network": "SKT",
     "monthlyFee": 59900,
@@ -3303,67 +4415,18 @@
     ],
     "svcCd": "BAND_PERF",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=BAND_PERF",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_175",
-    "name": "데이터안심15G+",
-    "network": "LGU+",
-    "monthlyFee": 41800,
-    "originalFee": null,
-    "data": "월15GB",
-    "voice": "100분",
-    "sms": "100건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
     ],
-    "svcCd": "DATASV15",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DATASV15",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "tagInfo": "R",
+    "esimYn": "N",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "선불"
   },
   {
-    "id": "plan_176",
-    "name": "선불 LTE 절약",
-    "network": "LGU+",
-    "monthlyFee": 9900,
-    "originalFee": null,
-    "data": "월0MB",
-    "voice": "0분",
-    "sms": "0건",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "LTESAVE",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=LTESAVE",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_177",
-    "name": "USIM데이터중심11G+",
-    "network": "SKT",
-    "monthlyFee": 49390,
-    "originalFee": null,
-    "data": "월11GB+매일2GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "PC0SB00087",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00087",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_178",
+    "id": "plan_158",
     "name": "선불 데이터선택 58.5",
     "network": "KT",
     "monthlyFee": 58500,
@@ -3379,10 +4442,563 @@
     ],
     "svcCd": "FTDP79",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP79",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "데이터 무제한"
+    ],
+    "tagInfo": "R,B",
+    "esimYn": "N",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "선불"
+  },
+  {
+    "id": "plan_159",
+    "name": "든든한300분5G(복지)",
+    "network": "LGU+",
+    "monthlyFee": 7700,
+    "originalFee": null,
+    "data": "월5GB",
+    "voice": "300분",
+    "sms": "300건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "DDH300M5G",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DDH300M5G",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "복지 전용"
+    ],
+    "tagInfo": "",
+    "esimYn": "N",
+    "selfYn": "N",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_160",
+    "name": "든든한300분5G(복지)",
+    "network": "SKT",
+    "monthlyFee": 7700,
+    "originalFee": null,
+    "data": "월5GB",
+    "voice": "300분",
+    "sms": "300건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00166",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00166",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "복지 전용"
+    ],
+    "tagInfo": "",
+    "esimYn": "N",
+    "selfYn": "N",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_161",
+    "name": "든든한300분5G(복지)",
+    "network": "KT",
+    "monthlyFee": 7700,
+    "originalFee": null,
+    "data": "월5GB",
+    "voice": "300분",
+    "sms": "300건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP208",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP208",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "복지 전용"
+    ],
+    "tagInfo": "",
+    "esimYn": "N",
+    "selfYn": "N",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_162",
+    "name": "NH프리덤11G+",
+    "network": "SKT",
+    "monthlyFee": 49390,
+    "originalFee": null,
+    "data": "월11GB+매일2GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00205",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00205",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "NH 제휴"
+    ],
+    "tagInfo": "R,B,E,S,N",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_163",
+    "name": "프리미엄데이터100분15G+",
+    "network": "SKT",
+    "monthlyFee": 41800,
+    "originalFee": null,
+    "data": "월15GB",
+    "voice": "100분",
+    "sms": "100건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00201",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00201",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "평생/장기 할인"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_164",
+    "name": "프리미엄데이터100G+",
+    "network": "SKT",
+    "monthlyFee": 53000,
+    "originalFee": null,
+    "data": "월100GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00198",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00198",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "평생/장기 할인"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_165",
+    "name": "프리미엄데이터11G+",
+    "network": "SKT",
+    "monthlyFee": 49390,
+    "originalFee": null,
+    "data": "월11GB+매일2GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00199",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00199",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "평생/장기 할인"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_166",
+    "name": "더든든한500분20G",
+    "network": "LGU+",
+    "monthlyFee": 55000,
+    "originalFee": null,
+    "data": "월20GB",
+    "voice": "500분",
+    "sms": "100건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "DDH500M20G",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DDH500M20G",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "평생/장기 할인"
+    ],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_167",
+    "name": "든든한데이터 20GB",
+    "network": "LGU+",
+    "monthlyFee": 18700,
+    "originalFee": null,
+    "data": "월20GB",
+    "voice": "0분",
+    "sms": "0건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "DDHDATA20G",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DDHDATA20G",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "평생/장기 할인"
+    ],
+    "tagInfo": "",
+    "esimYn": "N",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_168",
+    "name": "든든한데이터 10GB",
+    "network": "LGU+",
+    "monthlyFee": 13200,
+    "originalFee": null,
+    "data": "월10GB",
+    "voice": "0분",
+    "sms": "0건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "DDHDATA10G",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DDHDATA10G",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [
+      "평생/장기 할인"
+    ],
+    "tagInfo": "",
+    "esimYn": "N",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_169",
+    "name": "프리티구독7G+1M(스타벅스금액권)",
+    "network": "LGU+",
+    "monthlyFee": 39600,
+    "originalFee": null,
+    "data": "월7GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "SB_7G1M",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=SB_7G1M",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_170",
+    "name": "KR Basic",
+    "network": "KT",
+    "monthlyFee": 3300,
+    "originalFee": null,
+    "data": "월0GB",
+    "voice": "0분",
+    "sms": "0건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP283",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP283",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "N",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_171",
+    "name": "프리미엄데이터7G+1M",
+    "network": "SKT",
+    "monthlyFee": 29700,
+    "originalFee": null,
+    "data": "월7GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PC0SB00202",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PC0SB00202",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_172",
+    "name": "이마트24_Star",
+    "network": "LGU+",
+    "monthlyFee": 38500,
+    "originalFee": null,
+    "data": "월11GB+매일2GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "E24_UNLMT",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=E24_UNLMT",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_173",
+    "name": "이마트24_Grande+",
+    "network": "LGU+",
+    "monthlyFee": 15400,
+    "originalFee": null,
+    "data": "월5GB",
+    "voice": "240분",
+    "sms": "240건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "E24_GRANDP",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=E24_GRANDP",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_174",
+    "name": "이마트24_Tall+",
+    "network": "LGU+",
+    "monthlyFee": 11000,
+    "originalFee": null,
+    "data": "월2.4GB",
+    "voice": "240분",
+    "sms": "240건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "E24_TALLP",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=E24_TALLP",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_175",
+    "name": "이마트24_Short+",
+    "network": "LGU+",
+    "monthlyFee": 7700,
+    "originalFee": null,
+    "data": "월1GB",
+    "voice": "50분",
+    "sms": "50건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "E24_SHORTP",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=E24_SHORTP",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
+  },
+  {
+    "id": "plan_176",
+    "name": "선불데이터300MB+1Mbps",
+    "network": "LGU+",
+    "monthlyFee": 29700,
+    "originalFee": null,
+    "data": "월300MB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "PPDATA3P1",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=PPDATA3P1",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [],
+    "tagInfo": "",
+    "esimYn": "N",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "선불"
+  },
+  {
+    "id": "plan_177",
+    "name": "선불 데이터안심 2.5G",
+    "network": "KT",
+    "monthlyFee": 36000,
+    "originalFee": null,
+    "data": "월2.5GB",
+    "voice": "기본제공",
+    "sms": "기본제공",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "FTDP126",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP126",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [],
+    "tagInfo": "B",
+    "esimYn": "N",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "선불"
+  },
+  {
+    "id": "plan_178",
+    "name": "이마트24_Venti",
+    "network": "LGU+",
+    "monthlyFee": 41800,
+    "originalFee": null,
+    "data": "월15GB",
+    "voice": "100분",
+    "sms": "100건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "E24_VENTI",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=E24_VENTI",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [],
+    "tagInfo": "",
+    "esimYn": "Y",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "후불"
   },
   {
     "id": "plan_179",
+    "name": "선불 LTE 절약",
+    "network": "LGU+",
+    "monthlyFee": 9900,
+    "originalFee": null,
+    "data": "월0MB",
+    "voice": "0분",
+    "sms": "0건",
+    "promo": false,
+    "promoEndDate": null,
+    "partner": null,
+    "features": [
+      "LTE"
+    ],
+    "svcCd": "LTESAVE",
+    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=LTESAVE",
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [],
+    "tagInfo": "R,B",
+    "esimYn": "N",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "선불"
+  },
+  {
+    "id": "plan_180",
     "name": "프리티 선불 LTE 90",
     "network": "KT",
     "monthlyFee": 9900,
@@ -3398,26 +5014,13 @@
     ],
     "svcCd": "FTDP70",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=FTDP70",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
-  },
-  {
-    "id": "plan_180",
-    "name": "프리티데이터중심11G",
-    "network": "LGU+",
-    "monthlyFee": 64790,
-    "originalFee": null,
-    "data": "월11GB+매일2GB",
-    "voice": "기본제공",
-    "sms": "기본제공",
-    "promo": false,
-    "promoEndDate": null,
-    "partner": null,
-    "features": [
-      "LTE"
-    ],
-    "svcCd": "DATA58",
-    "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=DATA58",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [],
+    "tagInfo": "R,B",
+    "esimYn": "N",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "선불"
   },
   {
     "id": "plan_181",
@@ -3436,6 +5039,12 @@
     ],
     "svcCd": "P170P00003",
     "detailUrl": "https://www.freet.co.kr/plan/ratePlan/detail?svcCd=P170P00003",
-    "openUrl": "https://www.freet.co.kr/self/usimOpen"
+    "openUrl": "https://www.freet.co.kr/self/usimOpen",
+    "categories": [],
+    "tagInfo": "R",
+    "esimYn": "N",
+    "selfYn": "Y",
+    "genCd": "LTE",
+    "svcType": "선불"
   }
 ]

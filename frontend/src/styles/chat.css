@@ -168,12 +168,55 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
+.message-bubble-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
 .message-bubble {
   padding: 10px 14px;
   border-radius: 16px;
   font-size: 14px;
   line-height: 1.6;
   word-break: break-word;
+}
+
+/* 피드백 버튼 */
+.feedback-buttons {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.feedback-btn {
+  background: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 2px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+
+.feedback-btn:hover:not(:disabled) {
+  opacity: 1;
+  border-color: #f0543a;
+}
+
+.feedback-btn.active {
+  opacity: 1;
+  background: #e8f5e9;
+  border-color: #4caf50;
+}
+
+.feedback-btn.active.bad {
+  background: #ffebee;
+  border-color: #f44336;
+}
+
+.feedback-btn:disabled {
+  cursor: default;
 }
 
 .message-bubble.bot {

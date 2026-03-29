@@ -23,18 +23,14 @@ export function useChat() {
   const sendMessage = useCallback(async (text) => {
     if (!text.trim() || isLoading) return;
 
-    const userMessage = { role: 'user', content: text };
-    setMessages(prev => [...prev, userMessage]);
+    setMessages(prev => [...prev, { role: 'user', content: text }]);
     setIsLoading(true);
 
     try {
       const res = await fetch(`${API_URL}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: text,
-          sessionId: sessionIdRef.current
-        })
+        body: JSON.stringify({ message: text, sessionId: sessionIdRef.current })
       });
 
       const data = await res.json();
@@ -43,12 +39,15 @@ export function useChat() {
       setMessages(prev => [...prev, {
         role: 'bot',
         content: data.reply,
-        quickButtons: data.quickButtons || []
+        quickButtons: data.quickButtons || [],
+        messageId: data.messageId || null,
+        qualityScore: data.qualityScore || null,
+        feedback: null
       }]);
     } catch {
       setMessages(prev => [...prev, {
         role: 'bot',
-        content: '죄송합니다. 연결에 문제가 발생했습니다. 잠시 후 다시 시도해주세요.\n\n고객센터: SKT 1661-2207 / KT 1577-4551 / U+ 1588-3615',
+        content: '죄송합니다. 연결에 문제가 발생했습니다.\n\n고객센터: SKT 1661-2207 / KT 1577-4551 / U+ 1588-3615',
         quickButtons: ['다시 시도']
       }]);
     } finally {
@@ -56,5 +55,19 @@ export function useChat() {
     }
   }, [isLoading]);
 
-  return { messages, isLoading, sendMessage };
+  const sendFeedback = useCallback(async (messageId, feedback) => {
+    try {
+      await fetch(`${API_URL}/chat/feedback`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messageId, feedback })
+      });
+      // UI에 피드백 상태 반영
+      setMessages(prev => prev.map(m =>
+        m.messageId === messageId ? { ...m, feedback } : m
+      ));
+    } catch { /* 무시 */ }
+  }, []);
+
+  return { messages, isLoading, sendMessage, sendFeedback };
 }

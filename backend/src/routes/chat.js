@@ -1,28 +1,42 @@
 const express = require('express');
 const router = express.Router();
 const { chat } = require('../services/aiService');
+const dbQ = require('../db/queries');
 
 router.post('/', async (req, res) => {
   try {
     const { message, sessionId } = req.body;
-
-    if (!message || !message.trim()) {
-      return res.status(400).json({ error: '메시지를 입력해주세요.' });
-    }
+    if (!message || !message.trim()) return res.status(400).json({ error: '메시지를 입력해주세요.' });
 
     const sid = sessionId || `session_${Date.now()}`;
-    const { reply, category, source, tokensUsed } = await chat(message.trim(), sid);
-
+    const { reply, category, source, tokensUsed, qualityScore, messageId } = await chat(message.trim(), sid);
     const quickButtons = getQuickButtons(category);
 
-    res.json({ reply, category, sessionId: sid, quickButtons, source, tokensUsed });
+    res.json({ reply, category, sessionId: sid, quickButtons, source, tokensUsed, qualityScore, messageId });
   } catch (error) {
-    console.error('Chat error:', error.message);
+    console.error('Chat error:', error.message, error.stack);
     res.status(500).json({
-      reply: '죄송합니다. 일시적인 오류가 발생했습니다. 잠시 후 다시 시도해주세요.\n\n고객센터: SKT 1661-2207 / KT 1577-4551 / U+ 1588-3615',
+      reply: '죄송합니다. 일시적인 오류가 발생했습니다.\n\n고객센터: SKT 1661-2207 / KT 1577-4551 / U+ 1588-3615',
       category: 'error'
     });
   }
+});
+
+// 피드백 API (👍👎)
+router.post('/feedback', (req, res) => {
+  const { messageId, feedback } = req.body;
+  if (!messageId || !['good', 'bad'].includes(feedback)) {
+    return res.status(400).json({ error: 'messageId와 feedback(good/bad)이 필요합니다.' });
+  }
+  const updated = dbQ.saveFeedback(messageId, feedback);
+  if (!updated) return res.status(404).json({ error: '메시지를 찾을 수 없습니다.' });
+
+  // 👎 시 캐시 무효화
+  if (feedback === 'bad') {
+    // 해당 메시지의 원본 질문을 찾아 캐시 삭제 (선택적)
+  }
+
+  res.json({ success: true });
 });
 
 function getQuickButtons(category) {

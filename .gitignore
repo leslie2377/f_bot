@@ -8,3 +8,6 @@ backend/src/data/response_cache.json
 backend/src/data/keyword_stats.json
 backend/src/data/manual_docs.json
 backend/src/data/pdf/*.pdf
+backend/src/data/*.db
+backend/src/data/*.db-wal
+backend/src/data/*.db-shm
