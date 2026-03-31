@@ -173,16 +173,19 @@ function generateFallbackReply(message, category) {
 
   if (category === 'product' || ['요금', '가격', '추천'].some(k => lower.includes(k))) {
     const products = getProducts();
-    const top5 = products.sort((a, b) => (a.sellingPrice || a.monthlyFee) - (b.sellingPrice || b.monthlyFee)).slice(0, 5);
+    const top = products.sort((a, b) => (a.sellingPrice || a.monthlyFee) - (b.sellingPrice || b.monthlyFee)).slice(0, 4);
     let reply = '프리티 요금제를 안내드립니다.\n\n';
-    top5.forEach((p, i) => {
-      const price = p.sellingPrice || p.monthlyFee;
-      reply += `**${i + 1}. ${p.name}** (${p.network})\n`;
-      reply += `   월 ${price.toLocaleString()}원 | ${p.data} | 통화: ${p.voice}\n`;
-      if (p.hasDiscount) reply += `   ${p.discountMonths}개월 후: 월 ${(p.afterDiscountPrice || p.originalPrice).toLocaleString()}원\n`;
-      reply += `   👉 [상세보기](${p.detailUrl})\n\n`;
-    });
-    reply += '더 자세한 요금제는 프리티 홈페이지를 확인해주세요.\n📱 [전체 요금제 보기](https://www.freet.co.kr/plan/ratePlan)';
+    // 가로 테이블
+    const hdr = ['항목', ...top.map((p, i) => `요금제${i + 1}`)];
+    reply += `| ${hdr.join(' | ')} |\n|${hdr.map(() => '------').join('|')}|\n`;
+    reply += `| 요금제명 | ${top.map(p => `**${p.name}**`).join(' | ')} |\n`;
+    reply += `| 통신망 | ${top.map(p => p.network).join(' | ')} |\n`;
+    reply += `| **판매가** | ${top.map(p => `**월 ${(p.sellingPrice || p.monthlyFee).toLocaleString()}원**`).join(' | ')} |\n`;
+    reply += `| 할인후 | ${top.map(p => p.hasDiscount ? `${p.discountMonths}개월후 ${(p.afterDiscountPrice || p.originalPrice).toLocaleString()}원` : '-').join(' | ')} |\n`;
+    reply += `| 데이터 | ${top.map(p => p.data).join(' | ')} |\n`;
+    reply += `| 통화 | ${top.map(p => p.voice).join(' | ')} |\n`;
+    reply += `| 상세 | ${top.map(p => `[보기](${p.detailUrl})`).join(' | ')} |\n\n`;
+    reply += '📱 [바로 개통](https://www.freet.co.kr/self/usimOpen) | [전체 요금제](https://www.freet.co.kr/plan/ratePlan)';
     return reply;
   }
 

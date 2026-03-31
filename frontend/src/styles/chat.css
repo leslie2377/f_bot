@@ -320,6 +320,9 @@
   font-weight: 700;
   color: #3f4970;
   text-align: left;
+  background: #f4f5f9;
+  white-space: nowrap;
+  min-width: 65px;
 }
 
 /* 테이블 내 가격 강조 */
