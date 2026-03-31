@@ -128,41 +128,46 @@ function parseUsageConditions(text) {
   return Object.keys(cond).length > 0 ? cond : null;
 }
 
-// ─── 조건 기반 요금제 필터링 ───
+// ─── 조건 기반 요금제 필터링 + 저렴한 순 정렬 ───
 function filterProductDocs(docs, cond) {
   if (!cond) return docs;
 
-  return docs.filter(d => {
-    if (d.metadata.type !== 'product') return true; // 비요금제는 통과
+  const filtered = docs.filter(d => {
+    if (d.metadata.type !== 'product') return true;
 
     const fee = d.metadata.monthlyFee || 0;
     const dataStr = (d.metadata.data || '').toLowerCase();
     const voiceStr = (d.metadata.voice || '').toLowerCase();
     const network = d.metadata.network || '';
 
-    // 가격 필터 (30% 여유, 할인가 기준으로 판단)
-    if (cond.maxPrice && fee > cond.maxPrice * 1.3) return false;
+    // 통신망 필터 (정확 매칭)
+    if (cond.network && network !== cond.network) return false;
 
-    // 데이터 필터
-    if (cond.dataGB) {
+    // 데이터: 요청량 이상이면 OK (더 넉넉한 요금제도 포함)
+    if (cond.dataGB && cond.dataGB < 999) {
       const dataNum = parseInt(dataStr) || 0;
       const isUnlimited = dataStr.includes('무제한');
-      if (cond.dataGB >= 999 && !isUnlimited && dataNum < 50) return false;
-      if (cond.dataGB < 999 && dataNum > 0 && dataNum < cond.dataGB * 0.5) return false;
+      if (!isUnlimited && dataNum > 0 && dataNum < cond.dataGB * 0.8) return false;
     }
 
-    // 통화 필터 (기본제공 = 약 300분 이하)
+    // 통화: 요청량 이상이면 OK (기본제공=300분, 500분 요금제도 포함)
     if (cond.voiceMin) {
       const voiceNum = parseInt(voiceStr) || (voiceStr.includes('기본제공') ? 300 : 0);
       const isVoiceUnlimited = voiceStr.includes('무제한');
-      if (cond.voiceMin >= 9999 && !isVoiceUnlimited && voiceNum < 500) return false;
-      if (cond.voiceMin > 300 && !isVoiceUnlimited && voiceNum < cond.voiceMin) return false;
+      if (!isVoiceUnlimited && voiceNum < cond.voiceMin * 0.5) return false;
     }
 
-    // 통신망 필터
-    if (cond.network && network !== cond.network) return false;
+    // 가격: 예산의 2배 이내까지 허용 (저렴한 순으로 정렬할 거라 넓게)
+    if (cond.maxPrice && fee > cond.maxPrice * 2) return false;
 
     return true;
+  });
+
+  // 요금제만 저렴한 순 정렬
+  return filtered.sort((a, b) => {
+    if (a.metadata.type !== 'product') return 1;
+    if (b.metadata.type !== 'product') return -1;
+    return (a.metadata.monthlyFee || 0) - (b.metadata.monthlyFee || 0);
   });
 }
 
