@@ -138,30 +138,51 @@ function ChatWidget() {
 function MessageContent({ content }) {
   const blocks = parseBlocks(content);
 
-  // 연속 테이블을 카드 그룹으로 묶기
-  const grouped = [];
-  let tableGroup = [];
-  blocks.forEach((block, i) => {
-    if (block.type === 'table') {
-      tableGroup.push(block);
-    } else {
-      if (tableGroup.length > 1) {
-        grouped.push({ type: 'card-slider', tables: [...tableGroup] });
-        tableGroup = [];
-      } else if (tableGroup.length === 1) {
-        grouped.push(tableGroup[0]);
-        tableGroup = [];
+  // 테이블이 2개 이상이면 → 카드 슬라이더로 묶기 (제목 포함)
+  const tableCount = blocks.filter(b => b.type === 'table').length;
+
+  if (tableCount >= 2) {
+    // 테이블 + 직전 제목을 카드로 묶기
+    const cards = [];
+    const beforeCards = [];
+    const afterCards = [];
+    let foundFirst = false;
+    let lastTitle = '';
+
+    for (const block of blocks) {
+      if (block.type === 'table') {
+        foundFirst = true;
+        cards.push({ title: lastTitle, table: block });
+        lastTitle = '';
+      } else if (!foundFirst) {
+        beforeCards.push(block);
+      } else {
+        // 테이블 사이 텍스트 → 다음 카드 제목으로
+        const text = block.text || '';
+        if (text.match(/^\*\*\d+\./)) {
+          lastTitle = text;
+        } else if (text === '' || text === '---') {
+          // 구분선/빈줄 무시
+        } else if (cards.length > 0 && blocks.indexOf(block) === blocks.length - 1) {
+          afterCards.push(block);
+        } else {
+          lastTitle = text;
+        }
       }
-      grouped.push(block);
     }
-  });
-  if (tableGroup.length > 1) grouped.push({ type: 'card-slider', tables: tableGroup });
-  else if (tableGroup.length === 1) grouped.push(tableGroup[0]);
+
+    return (
+      <div>
+        {beforeCards.map((b, i) => <div key={`b${i}`} style={{ minHeight: b.text === '' ? '8px' : 'auto' }}>{processLine(b.text)}</div>)}
+        <PlanCardSlider cards={cards} />
+        {afterCards.map((b, i) => <div key={`a${i}`} style={{ minHeight: b.text === '' ? '8px' : 'auto' }}>{processLine(b.text)}</div>)}
+      </div>
+    );
+  }
 
   return (
     <div>
-      {grouped.map((block, i) => {
-        if (block.type === 'card-slider') return <CardSlider key={i} tables={block.tables} />;
+      {blocks.map((block, i) => {
         if (block.type === 'table') return <ChatTable key={i} headers={block.headers} rows={block.rows} />;
         if (block.type === 'line') return <div key={i} style={{ minHeight: block.text === '' ? '8px' : 'auto' }}>{processLine(block.text)}</div>;
         return null;
@@ -203,27 +224,28 @@ function parseBlocks(content) {
   return blocks;
 }
 
-// 카드 슬라이더 (좌우 스와이프)
-function CardSlider({ tables }) {
+// 요금제 카드 슬라이더 (좌우 이동)
+function PlanCardSlider({ cards }) {
   const [current, setCurrent] = React.useState(0);
-  const total = tables.length;
+  const total = cards.length;
 
   return (
     <div className="card-slider">
       <div className="card-slider-header">
         <button className="card-nav-btn" disabled={current <= 0} onClick={() => setCurrent(c => c - 1)}>◀</button>
-        <span className="card-counter">{current + 1} / {total}</span>
+        <span className="card-counter">{current + 1} / {total} 요금제</span>
         <button className="card-nav-btn" disabled={current >= total - 1} onClick={() => setCurrent(c => c + 1)}>▶</button>
       </div>
       <div className="card-slider-track" style={{ transform: `translateX(-${current * 100}%)` }}>
-        {tables.map((t, i) => (
+        {cards.map((card, i) => (
           <div key={i} className="card-slide">
-            <ChatTable headers={t.headers} rows={t.rows} />
+            {card.title && <div className="card-title">{processLine(card.title)}</div>}
+            <ChatTable headers={card.table.headers} rows={card.table.rows} />
           </div>
         ))}
       </div>
       <div className="card-dots">
-        {tables.map((_, i) => (
+        {cards.map((_, i) => (
           <span key={i} className={`card-dot ${i === current ? 'active' : ''}`} onClick={() => setCurrent(i)} />
         ))}
       </div>
