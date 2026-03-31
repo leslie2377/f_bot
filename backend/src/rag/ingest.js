@@ -63,9 +63,9 @@ function loadProducts() {
     const dataNum = parseInt(p.data) || 0;
     const dataTag = (p.data || '').includes('무제한') ? '무제한 데이터무제한' : dataNum >= 100 ? '대용량 100GB이상' : dataNum >= 20 ? '대용량' : dataNum >= 10 ? '중용량' : '소용량';
     const voiceRaw = p.voiceRaw || p.voice || '';
-    const voiceTag = voiceRaw === '기본제공' ? '기본제공' : voiceRaw;
+    const voiceTag = voiceRaw === '기본제공' ? '기본제공(300분 이하)' : voiceRaw;
     const smsRaw = p.smsRaw || p.sms || '';
-    const smsTag = smsRaw === '기본제공' ? '기본제공' : smsRaw;
+    const smsTag = smsRaw === '기본제공' ? '기본제공(100건 이하)' : smsRaw;
     const features = (p.features || []).join(' ');
     const name = p.name || '';
     const brandMatches = name.match(/(CGV|다이소|올리브영|하나은행|신한카드|CU|NH|밀리의서재|예스24|멜론|SEEZN|글로벌)/gi) || [];

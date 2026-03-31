@@ -137,9 +137,31 @@ function ChatWidget() {
 
 function MessageContent({ content }) {
   const blocks = parseBlocks(content);
+
+  // 연속 테이블을 카드 그룹으로 묶기
+  const grouped = [];
+  let tableGroup = [];
+  blocks.forEach((block, i) => {
+    if (block.type === 'table') {
+      tableGroup.push(block);
+    } else {
+      if (tableGroup.length > 1) {
+        grouped.push({ type: 'card-slider', tables: [...tableGroup] });
+        tableGroup = [];
+      } else if (tableGroup.length === 1) {
+        grouped.push(tableGroup[0]);
+        tableGroup = [];
+      }
+      grouped.push(block);
+    }
+  });
+  if (tableGroup.length > 1) grouped.push({ type: 'card-slider', tables: tableGroup });
+  else if (tableGroup.length === 1) grouped.push(tableGroup[0]);
+
   return (
     <div>
-      {blocks.map((block, i) => {
+      {grouped.map((block, i) => {
+        if (block.type === 'card-slider') return <CardSlider key={i} tables={block.tables} />;
         if (block.type === 'table') return <ChatTable key={i} headers={block.headers} rows={block.rows} />;
         if (block.type === 'line') return <div key={i} style={{ minHeight: block.text === '' ? '8px' : 'auto' }}>{processLine(block.text)}</div>;
         return null;
@@ -179,6 +201,34 @@ function parseBlocks(content) {
     }
   }
   return blocks;
+}
+
+// 카드 슬라이더 (좌우 스와이프)
+function CardSlider({ tables }) {
+  const [current, setCurrent] = React.useState(0);
+  const total = tables.length;
+
+  return (
+    <div className="card-slider">
+      <div className="card-slider-header">
+        <button className="card-nav-btn" disabled={current <= 0} onClick={() => setCurrent(c => c - 1)}>◀</button>
+        <span className="card-counter">{current + 1} / {total}</span>
+        <button className="card-nav-btn" disabled={current >= total - 1} onClick={() => setCurrent(c => c + 1)}>▶</button>
+      </div>
+      <div className="card-slider-track" style={{ transform: `translateX(-${current * 100}%)` }}>
+        {tables.map((t, i) => (
+          <div key={i} className="card-slide">
+            <ChatTable headers={t.headers} rows={t.rows} />
+          </div>
+        ))}
+      </div>
+      <div className="card-dots">
+        {tables.map((_, i) => (
+          <span key={i} className={`card-dot ${i === current ? 'active' : ''}`} onClick={() => setCurrent(i)} />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 // 테이블 컴포넌트
