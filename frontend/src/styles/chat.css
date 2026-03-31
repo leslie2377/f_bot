@@ -232,6 +232,190 @@
   border-bottom-right-radius: 4px;
 }
 
+/* 링크 스타일 */
+.web-link {
+  color: #f0543a;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.tel-link {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 600;
+  background: #e3f2fd;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 13px;
+  white-space: nowrap;
+  display: inline-block;
+  margin: 1px 0;
+  transition: background 0.2s;
+}
+
+.tel-link:hover {
+  background: #bbdefb;
+}
+
+/* 채팅 내 테이블 */
+.chat-table-wrap {
+  overflow-x: auto;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #e8e8e8;
+}
+
+.chat-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.chat-table thead {
+  background: linear-gradient(135deg, #3f4970, #2d3555);
+  color: #fff;
+}
+
+.chat-table th {
+  padding: 8px 10px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+}
+
+.chat-table td {
+  padding: 7px 10px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.chat-table tbody tr:nth-child(even) {
+  background: #fafbfd;
+}
+
+.chat-table tbody tr:hover {
+  background: #fff5f3;
+}
+
+.chat-table tbody tr td:first-child {
+  font-weight: 600;
+  color: #3f4970;
+  text-align: left;
+}
+
+.chat-table a.web-link {
+  color: #f0543a;
+  font-size: 11px;
+}
+
+.chat-table a.tel-link {
+  font-size: 11px;
+  padding: 1px 6px;
+}
+
+.chat-table td strong {
+  color: #f0543a;
+}
+
+/* 선택 옵션 */
+.option-selector {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.option-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #3f4970;
+}
+
+.option-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.option-btn {
+  padding: 6px 12px;
+  border: 1.5px solid #e0e0e0;
+  background: #fafafa;
+  border-radius: 18px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #555;
+}
+
+.option-btn:hover {
+  border-color: #f0543a;
+  background: #fff5f3;
+  color: #f0543a;
+}
+
+.option-btn.selected {
+  border-color: #f0543a;
+  background: #f0543a;
+  color: white;
+  font-weight: 600;
+}
+
+.option-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #f0f0f0;
+  flex-wrap: wrap;
+}
+
+.option-selected-text {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.option-chip {
+  background: #f0f0f5;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  color: #3f4970;
+  font-weight: 600;
+}
+
+.option-submit {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #f0543a, #e2391d);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.option-submit:hover {
+  opacity: 0.9;
+}
+
 /* 로딩 */
 .loading-bubble {
   padding: 14px 20px;

@@ -210,23 +210,59 @@ function SessionDetail({ sessionId, onBack }) {
 }
 
 function MessageContent({ content }) {
-  const lines = content.split('\n');
+  const blocks = parseBlocks(content);
   return (
     <div>
-      {lines.map((line, i) => {
-        const segments = line.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, '___LINK[$1]($2)___').split(/(___LINK\[.*?\]\(.*?\)___)/g);
-        return (
-          <div key={i} style={{ minHeight: line === '' ? '8px' : 'auto' }}>
-            {segments.map((seg, idx) => {
-              const m = seg.match(/___LINK\[(.*?)\]\((.*?)\)___/);
-              if (m) return <a key={idx} href={m[2]} target="_blank" rel="noopener noreferrer" style={{ color: '#e91e63', textDecoration: 'underline' }}>{m[1]}</a>;
-              return seg.split(/\*\*(.*?)\*\*/g).map((p, j) => j % 2 === 1 ? <strong key={`${idx}-${j}`}>{p}</strong> : p);
-            })}
-          </div>
-        );
+      {blocks.map((block, i) => {
+        if (block.type === 'table') return <AdminTable key={i} headers={block.headers} rows={block.rows} />;
+        return <div key={i} style={{ minHeight: block.text === '' ? '8px' : 'auto' }}>{processInline(block.text)}</div>;
       })}
     </div>
   );
+}
+
+function parseBlocks(content) {
+  const lines = content.split('\n');
+  const blocks = [];
+  let i = 0;
+  while (i < lines.length) {
+    if (lines[i].trim().startsWith('|') && lines[i].includes('|', 1)) {
+      const tl = [];
+      while (i < lines.length && lines[i].trim().startsWith('|')) { tl.push(lines[i]); i++; }
+      if (tl.length >= 2) {
+        const headers = tl[0].split('|').filter(c => c.trim()).map(c => c.trim());
+        const startRow = tl[1].includes('---') ? 2 : 1;
+        const rows = tl.slice(startRow).map(l => l.split('|').filter(c => c.trim()).map(c => c.trim()));
+        blocks.push({ type: 'table', headers, rows });
+      } else { tl.forEach(l => blocks.push({ type: 'line', text: l })); }
+    } else { blocks.push({ type: 'line', text: lines[i] }); i++; }
+  }
+  return blocks;
+}
+
+function AdminTable({ headers, rows }) {
+  return (
+    <div style={{ overflow: 'auto', margin: '8px 0', borderRadius: 8, border: '1px solid #e0e0e0' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12 }}>
+        <thead><tr>{headers.map((h, i) => <th key={i} style={{ padding: '7px 10px', background: '#1a1a2e', color: '#fff', fontWeight: 700, textAlign: 'center', whiteSpace: 'nowrap' }}>{processInline(h)}</th>)}</tr></thead>
+        <tbody>{rows.map((row, ri) => (
+          <tr key={ri} style={{ background: ri % 2 === 0 ? '#fff' : '#f8f8fc' }}>
+            {row.map((cell, ci) => <td key={ci} style={{ padding: '6px 10px', borderBottom: '1px solid #eee', textAlign: ci === 0 ? 'left' : 'center', fontWeight: ci === 0 ? 600 : 400 }}>{processInline(cell)}</td>)}
+          </tr>
+        ))}</tbody>
+      </table>
+    </div>
+  );
+}
+
+function processInline(text) {
+  if (typeof text !== 'string') return text;
+  const combined = text.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, '___LINK[$1]($2)___');
+  return combined.split(/(___LINK\[.*?\]\(.*?\)___)/g).map((seg, idx) => {
+    const m = seg.match(/___LINK\[(.*?)\]\((.*?)\)___/);
+    if (m) return <a key={idx} href={m[2]} target="_blank" rel="noopener noreferrer" style={{ color: '#e91e63', textDecoration: 'underline' }}>{m[1]}</a>;
+    return seg.split(/\*\*(.*?)\*\*/g).map((p, j) => j % 2 === 1 ? <strong key={`${idx}-${j}`}>{p}</strong> : p);
+  });
 }
 
 export default SessionDetail;

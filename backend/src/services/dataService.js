@@ -29,29 +29,46 @@ function searchFaqs(query) {
 }
 
 // FAQ 정확 매칭: AI 호출 없이 직접 응답 가능한지 판단
-// "추천", "비교" 등 AI 판단이 필요한 질문은 제외
-const AI_REQUIRED_KEYWORDS = ['추천', '비교', '어떤게 좋', '골라', '뭐가 나', '어디가', '차이'];
+const AI_REQUIRED_KEYWORDS = ['추천', '비교', '어떤게 좋', '골라', '뭐가 나', '어디가', '차이', '변경', '위약금', '미납', '로밍', '결합', '리필', '품질'];
 
 function findExactFaqMatch(message) {
   const lower = message.toLowerCase();
 
-  // AI 판단이 필요한 질문은 FAQ 매칭 스킵
+  // AI 판단이 필요하거나, 복합 질문(10자 이상)은 RAG로 전달
   if (AI_REQUIRED_KEYWORDS.some(k => lower.includes(k))) return null;
+
+  // 너무 긴 질문은 복합 질문일 가능성 → RAG
+  if (lower.length > 25) return null;
 
   let bestMatch = null;
   let bestScore = 0;
+  let bestRatio = 0;
 
   for (const faq of faqData) {
     let score = 0;
-    // 키워드 매칭 (2글자 이상만)
-    faq.keywords.forEach(k => { if (k.length >= 2 && lower.includes(k)) score += 2; });
-    // 질문 텍스트 유사도 (3글자 이상 단어만)
-    const qWords = faq.question.replace(/[?？]/g, '').split(/\s+/);
-    qWords.forEach(w => { if (w.length >= 3 && lower.includes(w.toLowerCase())) score += 1; });
+    let matchedKeywords = 0;
 
-    if (score > bestScore && score >= 4) {
+    // 키워드 매칭 (2글자 이상)
+    faq.keywords.forEach(k => {
+      if (k.length >= 2 && lower.includes(k)) { score += 2; matchedKeywords++; }
+    });
+
+    // 질문 텍스트 유사도 (3글자 이상 핵심 단어)
+    const qWords = faq.question.replace(/[?？은는이가을를]/g, '').split(/\s+/).filter(w => w.length >= 2);
+    let matchedWords = 0;
+    qWords.forEach(w => {
+      if (lower.includes(w.toLowerCase())) { score += 1; matchedWords++; }
+    });
+
+    // 매칭 비율: 사용자 질문에서 FAQ 키워드가 차지하는 비율
+    const totalFaqTerms = faq.keywords.length + qWords.length;
+    const matchRatio = totalFaqTerms > 0 ? (matchedKeywords + matchedWords) / totalFaqTerms : 0;
+
+    // 점수 5점 이상 + 매칭 비율 40% 이상이어야 확정
+    if (score > bestScore && score >= 5 && matchRatio >= 0.4) {
       bestScore = score;
       bestMatch = faq;
+      bestRatio = matchRatio;
     }
   }
 

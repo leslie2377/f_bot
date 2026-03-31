@@ -269,15 +269,29 @@ function getKeywordStats({ sort = 'count', limit = 50, category } = {}) {
 // ═══════════════════════════════════════
 
 function getCachedResponse(queryKey) {
-  const row = db.prepare(`
-    SELECT * FROM response_cache
-    WHERE query_key = ? AND created_at > datetime('now', '-24 hours')
+  // 1. 정확 매칭
+  const exact = db.prepare(`
+    SELECT * FROM response_cache WHERE query_key = ? AND created_at > datetime('now','+9 hours', '-24 hours')
   `).get(queryKey);
 
-  if (row) {
-    db.prepare('UPDATE response_cache SET hit_count = hit_count + 1, last_hit_at = datetime(\'now\') WHERE query_key = ?').run(queryKey);
-    return { reply: row.reply, category: row.category, source: 'cache_exact' };
+  if (exact) {
+    db.prepare("UPDATE response_cache SET hit_count = hit_count + 1, last_hit_at = datetime('now','+9 hours') WHERE query_key = ?").run(queryKey);
+    return { reply: exact.reply, category: exact.category, source: 'cache_exact' };
   }
+
+  // 2. 키워드 포함 매칭 (queryKey의 핵심 단어가 캐시 키에 포함)
+  const words = queryKey.split(' ').filter(w => w.length >= 2);
+  if (words.length >= 2) {
+    const rows = db.prepare(`SELECT * FROM response_cache WHERE created_at > datetime('now','+9 hours', '-24 hours')`).all();
+    for (const row of rows) {
+      const matchCount = words.filter(w => row.query_key.includes(w)).length;
+      if (matchCount >= 2 && matchCount / words.length >= 0.6) {
+        db.prepare("UPDATE response_cache SET hit_count = hit_count + 1, last_hit_at = datetime('now','+9 hours') WHERE query_key = ?").run(row.query_key);
+        return { reply: row.reply, category: row.category, source: 'cache_similar' };
+      }
+    }
+  }
+
   return null;
 }
 

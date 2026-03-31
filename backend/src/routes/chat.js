@@ -10,9 +10,12 @@ router.post('/', async (req, res) => {
 
     const sid = sessionId || `session_${Date.now()}`;
     const { reply, category, source, tokensUsed, qualityScore, messageId } = await chat(message.trim(), sid);
-    const quickButtons = getQuickButtons(category);
 
-    res.json({ reply, category, sessionId: sid, quickButtons, source, tokensUsed, qualityScore, messageId });
+    // 응답 내용 기반으로 선택 옵션 생성
+    const options = detectOptions(reply, message);
+    const quickButtons = options ? null : getQuickButtons(category);
+
+    res.json({ reply, category, sessionId: sid, quickButtons, options, source, tokensUsed, qualityScore, messageId });
   } catch (error) {
     console.error('Chat error:', error.message, error.stack);
     res.status(500).json({
@@ -22,7 +25,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// 피드백 API (👍👎)
+// 피드백 API
 router.post('/feedback', (req, res) => {
   const { messageId, feedback } = req.body;
   if (!messageId || !['good', 'bad'].includes(feedback)) {
@@ -30,14 +33,61 @@ router.post('/feedback', (req, res) => {
   }
   const updated = dbQ.saveFeedback(messageId, feedback);
   if (!updated) return res.status(404).json({ error: '메시지를 찾을 수 없습니다.' });
-
-  // 👎 시 캐시 무효화
-  if (feedback === 'bad') {
-    // 해당 메시지의 원본 질문을 찾아 캐시 삭제 (선택적)
-  }
-
   res.json({ success: true });
 });
+
+// 봇 응답에서 선택 옵션 감지
+function detectOptions(reply, userMessage) {
+  const lower = reply.toLowerCase();
+
+  // 통화량 질문 감지
+  if (lower.includes('통화량') && lower.includes('데이터') && lower.includes('예산')) {
+    return [
+      {
+        title: '📞 통화량',
+        items: [
+          { label: '거의 안함', value: '통화 거의 안해요' },
+          { label: '100분 이하', value: '통화 100분 정도 써요' },
+          { label: '300분', value: '통화 300분 정도 써요' },
+          { label: '500분 이상', value: '통화 500분 이상 써요' },
+          { label: '무제한', value: '통화 무제한이 필요해요' },
+        ]
+      },
+      {
+        title: '📊 데이터',
+        items: [
+          { label: '3GB 이하', value: '데이터 3GB면 충분해요' },
+          { label: '5GB', value: '데이터 5GB 필요해요' },
+          { label: '10GB', value: '데이터 10GB 필요해요' },
+          { label: '15~20GB', value: '데이터 20GB 정도 써요' },
+          { label: '50GB 이상', value: '데이터 50GB 이상 필요해요' },
+          { label: '무제한', value: '데이터 무제한이 필요해요' },
+        ]
+      },
+      {
+        title: '💰 월 예산',
+        items: [
+          { label: '1만원 이하', value: '예산은 1만원 이하에요' },
+          { label: '1~2만원', value: '예산은 2만원 정도에요' },
+          { label: '2~3만원', value: '예산은 3만원 정도에요' },
+          { label: '3~5만원', value: '예산은 5만원 정도에요' },
+          { label: '상관없음', value: '예산은 상관없어요' },
+        ]
+      },
+      {
+        title: '📡 통신망',
+        items: [
+          { label: 'SKT', value: 'SKT 요금제로 부탁해요' },
+          { label: 'KT', value: 'KT 요금제로 부탁해요' },
+          { label: 'LG U+', value: 'LG U+ 요금제로 부탁해요' },
+          { label: '상관없음', value: '통신망은 상관없어요' },
+        ]
+      }
+    ];
+  }
+
+  return null;
+}
 
 function getQuickButtons(category) {
   const buttons = {

@@ -1,4 +1,4 @@
-const { findExactFaqMatch } = require('./dataService');
+const { findExactFaqMatch, getProducts, getFaqs, getGuide } = require('./dataService');
 const { scoreResponse, adjustScoreByFollowup, isUnresolved } = require('./qualityScorer');
 const dbQ = require('../db/queries');
 const { ragChat, initChain } = require('../rag/ragChain');
@@ -106,10 +106,14 @@ async function chat(message, sessionId) {
   }
 
   // ── 2단계: DB 캐시 조회 ──
-  if (!reply) {
+  // 사용량/조건 포함 메시지는 매번 RAG 검색 필요 (캐시 스킵)
+  const hasUsageInfo = /\d+\s*(gb|기가|분|만원|만\s*원)/i.test(message);
+  const isConversational = history.length > 2; // 대화 중이면 캐시 스킵
+
+  if (!reply && !hasUsageInfo && !isConversational) {
     const queryKey = normalizeQuery(message);
     const cached = dbQ.getCachedResponse(queryKey);
-    if (cached) {
+    if (cached && !isUnresolved(cached.reply)) {
       reply = cached.reply;
       source = cached.source;
     }
@@ -121,11 +125,20 @@ async function chat(message, sessionId) {
       `${m.role === 'user' ? '고객' : '상담AI'}: ${m.content.slice(0, 200)}`
     ).join('\n');
 
-    reply = await ragChat(message, historyText);
-    source = 'rag';
+    try {
+      reply = await ragChat(message, historyText);
+      source = 'rag';
+    } catch (err) {
+      console.error('RAG 에러:', err.message);
+      // RAG 실패 시 폴백: 관련 데이터로 기본 응답 생성
+      reply = generateFallbackReply(message, category);
+      source = 'fallback';
+    }
 
-    // 캐시 저장
-    dbQ.setCachedResponse(normalizeQuery(message), reply, category);
+    // 품질 좋은 응답만 캐시 (답변 불가/에러/사용량 답변은 캐시하지 않음)
+    if (!isUnresolved(reply) && source !== 'fallback' && !hasUsageInfo) {
+      dbQ.setCachedResponse(normalizeQuery(message), reply, category);
+    }
   }
 
   const responseTimeMs = Date.now() - startTime;
@@ -152,6 +165,44 @@ async function chat(message, sessionId) {
   }
 
   return { reply, category, source, tokensUsed, qualityScore, messageId: botMsgId };
+}
+
+// ─── 폴백 응답 생성 (RAG 실패 시 데이터 기반 직접 응답) ───
+function generateFallbackReply(message, category) {
+  const lower = message.toLowerCase();
+
+  if (category === 'product' || ['요금', '가격', '추천'].some(k => lower.includes(k))) {
+    const products = getProducts();
+    const top5 = products.sort((a, b) => (a.sellingPrice || a.monthlyFee) - (b.sellingPrice || b.monthlyFee)).slice(0, 5);
+    let reply = '프리티 요금제를 안내드립니다.\n\n';
+    top5.forEach((p, i) => {
+      const price = p.sellingPrice || p.monthlyFee;
+      reply += `**${i + 1}. ${p.name}** (${p.network})\n`;
+      reply += `   월 ${price.toLocaleString()}원 | ${p.data} | 통화: ${p.voice}\n`;
+      if (p.hasDiscount) reply += `   ${p.discountMonths}개월 후: 월 ${(p.afterDiscountPrice || p.originalPrice).toLocaleString()}원\n`;
+      reply += `   👉 [상세보기](${p.detailUrl})\n\n`;
+    });
+    reply += '더 자세한 요금제는 프리티 홈페이지를 확인해주세요.\n📱 [전체 요금제 보기](https://www.freet.co.kr/plan/ratePlan)';
+    return reply;
+  }
+
+  if (category === 'opening' || ['개통', '가입', '유심'].some(k => lower.includes(k))) {
+    const guide = getGuide();
+    const steps = guide.selfActivation?.steps || [];
+    let reply = '프리티 셀프개통 절차를 안내드립니다.\n\n';
+    steps.forEach(s => { reply += `**${s.step}단계. ${s.title}**\n${s.description}\n\n`; });
+    reply += `⏰ 신규: ${guide.selfActivation?.hours?.newActivation || '09:00~20:00'}\n`;
+    reply += `⏰ 번호이동: ${guide.selfActivation?.hours?.numberTransfer || '10:00~19:00'}\n`;
+    reply += `\n📱 [셀프개통 바로가기](https://www.freet.co.kr/self/usimOpen)`;
+    return reply;
+  }
+
+  if (category === 'cs' || ['고객센터', '전화', '연락', '문의'].some(k => lower.includes(k))) {
+    return '**프리티 고객센터 안내**\n\n| 통신망 | 전화번호 | 이메일 |\n|--------|----------|--------|\n| SKT | [1661-2207](tel:1661-2207) | skt@freet.co.kr |\n| KT | [1577-4551](tel:1577-4551) | kt@freet.co.kr |\n| U+ | [1588-3615](tel:1588-3615) | lg@freet.co.kr |\n| 무료 | [114](tel:114) | - |\n\n⏰ 평일 09:00~18:00 (점심 12:00~13:00)\n💬 [1:1 온라인 문의](https://www.freet.co.kr/customer/inquiry/form)';
+  }
+
+  // 기본 폴백
+  return '죄송합니다. 해당 문의에 대해 정확한 답변을 드리기 어렵습니다.\n\n고객센터로 문의해주시면 상세한 안내를 받으실 수 있습니다.\n\n| 통신망 | 전화번호 |\n|--------|----------|\n| SKT | [1661-2207](tel:1661-2207) |\n| KT | [1577-4551](tel:1577-4551) |\n| U+ | [1588-3615](tel:1588-3615) |\n\n⏰ 평일 09:00~18:00\n💬 [1:1 문의](https://www.freet.co.kr/customer/inquiry/form)';
 }
 
 // 서버 시작 시 RAG 초기화

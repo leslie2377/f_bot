@@ -6,14 +6,16 @@ export function useChat() {
   const [messages, setMessages] = useState([
     {
       role: 'bot',
-      content: '안녕하세요! 프리티 셀프개통 상담 AI입니다 😊\n\n궁금한 점을 물어보시거나, 아래 자주 묻는 질문을 선택해주세요!',
+      content: '안녕하세요! 프리티 셀프개통 상담 AI입니다 😊\n\n혹시 제가 도와드릴 수 있는 부분이 있으신가요?',
       quickButtons: [
-        '셀프개통 방법',
         '요금제 추천',
-        '준비물 확인',
+        '셀프개통 절차 안내',
+        '요금제 상세 정보',
+        '약관 및 정책 안내',
         '고객센터 연결',
         '유심/eSIM 안내',
-        '번호이동 방법'
+        '번호이동 방법',
+        '준비물 확인'
       ]
     }
   ]);
@@ -40,6 +42,7 @@ export function useChat() {
         role: 'bot',
         content: data.reply,
         quickButtons: data.quickButtons || [],
+        options: data.options || null,
         messageId: data.messageId || null,
         qualityScore: data.qualityScore || null,
         feedback: null
