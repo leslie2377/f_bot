@@ -241,13 +241,19 @@ function parseBlocks(content) {
 }
 
 function AdminTable({ headers, rows }) {
+  const cellRender = (text) => {
+    if (typeof text !== 'string') return text;
+    const lines = text.split(/<br\s*\/?>/gi);
+    if (lines.length <= 1) return processInline(text);
+    return lines.map((l, i) => <span key={i}>{i > 0 && <br />}{processInline(l.trim())}</span>);
+  };
   return (
     <div style={{ overflow: 'auto', margin: '8px 0', borderRadius: 8, border: '1px solid #e0e0e0' }}>
       <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12 }}>
-        <thead><tr>{headers.map((h, i) => <th key={i} style={{ padding: '7px 10px', background: '#1a1a2e', color: '#fff', fontWeight: 700, textAlign: 'center', whiteSpace: 'nowrap' }}>{processInline(h)}</th>)}</tr></thead>
+        <thead><tr>{headers.map((h, i) => <th key={i} style={{ padding: '7px 10px', background: '#1a1a2e', color: '#fff', fontWeight: 700, textAlign: 'center', whiteSpace: 'nowrap' }}>{cellRender(h)}</th>)}</tr></thead>
         <tbody>{rows.map((row, ri) => (
           <tr key={ri} style={{ background: ri % 2 === 0 ? '#fff' : '#f8f8fc' }}>
-            {row.map((cell, ci) => <td key={ci} style={{ padding: '6px 10px', borderBottom: '1px solid #eee', textAlign: ci === 0 ? 'left' : 'center', fontWeight: ci === 0 ? 600 : 400 }}>{processInline(cell)}</td>)}
+            {row.map((cell, ci) => <td key={ci} style={{ padding: '6px 10px', borderBottom: '1px solid #eee', textAlign: ci === 0 ? 'left' : 'center', fontWeight: ci === 0 ? 600 : 400 }}>{cellRender(cell)}</td>)}
           </tr>
         ))}</tbody>
       </table>

@@ -187,16 +187,30 @@ function ChatTable({ headers, rows }) {
     <div className="chat-table-wrap">
       <table className="chat-table">
         <thead>
-          <tr>{headers.map((h, i) => <th key={i}>{processLine(h)}</th>)}</tr>
+          <tr>{headers.map((h, i) => <th key={i}>{processCell(h)}</th>)}</tr>
         </thead>
         <tbody>
           {rows.map((row, ri) => (
-            <tr key={ri}>{row.map((cell, ci) => <td key={ci}>{processLine(cell)}</td>)}</tr>
+            <tr key={ri}>{row.map((cell, ci) => <td key={ci}>{processCell(cell)}</td>)}</tr>
           ))}
         </tbody>
       </table>
     </div>
   );
+}
+
+// 테이블 셀 처리: <br> 줄바꿈 + 마크다운 인라인
+function processCell(text) {
+  if (typeof text !== 'string') return text;
+  // <br> 또는 <br/> → 줄바꿈 분리
+  const lines = text.split(/<br\s*\/?>/gi);
+  if (lines.length <= 1) return processLine(text);
+  return lines.map((line, i) => (
+    <React.Fragment key={i}>
+      {i > 0 && <br />}
+      <span>{processLine(line.trim())}</span>
+    </React.Fragment>
+  ));
 }
 
 // 선택 옵션 컴포넌트

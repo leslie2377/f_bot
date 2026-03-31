@@ -260,65 +260,105 @@
 /* 채팅 내 테이블 */
 .chat-table-wrap {
   overflow-x: auto;
-  margin: 8px 0;
-  border-radius: 10px;
-  border: 1px solid #e8e8e8;
+  margin: 10px -4px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(63, 73, 112, 0.1);
 }
 
 .chat-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: 12px;
-  line-height: 1.4;
+  line-height: 1.5;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .chat-table thead {
   background: linear-gradient(135deg, #3f4970, #2d3555);
-  color: #fff;
 }
 
 .chat-table th {
-  padding: 8px 10px;
+  padding: 10px 12px;
   font-weight: 700;
   text-align: center;
   white-space: nowrap;
   font-size: 11px;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-transform: uppercase;
 }
 
+.chat-table th:first-child { border-radius: 12px 0 0 0; }
+.chat-table th:last-child { border-radius: 0 12px 0 0; }
+
 .chat-table td {
-  padding: 7px 10px;
+  padding: 10px 12px;
   text-align: center;
-  border-bottom: 1px solid #f0f0f0;
-  color: #333;
+  border-bottom: 1px solid #eef0f5;
+  color: #444;
+  vertical-align: middle;
+}
+
+.chat-table tbody tr {
+  transition: background 0.15s;
 }
 
 .chat-table tbody tr:nth-child(even) {
-  background: #fafbfd;
+  background: #f8f9fc;
 }
 
 .chat-table tbody tr:hover {
-  background: #fff5f3;
+  background: #fff0ed;
 }
 
+.chat-table tbody tr:last-child td:first-child { border-radius: 0 0 0 12px; }
+.chat-table tbody tr:last-child td:last-child { border-radius: 0 0 12px 0; }
+
 .chat-table tbody tr td:first-child {
-  font-weight: 600;
+  font-weight: 700;
   color: #3f4970;
   text-align: left;
 }
 
-.chat-table a.web-link {
+/* 테이블 내 가격 강조 */
+.chat-table td strong {
   color: #f0543a;
-  font-size: 11px;
+  font-size: 13px;
+}
+
+/* 테이블 내 부가 텍스트 (할인 후 가격 등) */
+.chat-table td span {
+  display: block;
+}
+
+.chat-table td br + span,
+.chat-table td span + span {
+  font-size: 10px;
+  color: #999;
+  margin-top: 2px;
+}
+
+/* 테이블 내 링크 */
+.chat-table a.web-link {
+  color: #fff;
+  background: #f0543a;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.chat-table a.web-link:hover {
+  background: #e2391d;
 }
 
 .chat-table a.tel-link {
   font-size: 11px;
-  padding: 1px 6px;
-}
-
-.chat-table td strong {
-  color: #f0543a;
+  padding: 2px 8px;
 }
 
 /* 선택 옵션 */
