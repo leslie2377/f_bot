@@ -3,9 +3,20 @@ import { useSessions } from '../hooks/useAdmin.js';
 
 const CAT_LABELS = { opening: '개통', product: '요금제', terms: '약관', cs: '고객센터', general: '일반', payment: '결제' };
 
-function SessionList({ onSelectSession }) {
+function SessionList({ onSelectSession, initialFilters = {} }) {
   const { list, pagination, isLoading, fetchSessions } = useSessions();
-  const [filters, setFilters] = useState({ page: 1, search: '', category: '', status: '', sort: 'latest' });
+  const [filters, setFilters] = useState({
+    page: 1, search: '', category: '', status: '', sort: 'latest',
+    dateFrom: '', dateTo: '',
+    ...initialFilters
+  });
+
+  useEffect(() => {
+    // initialFilters 변경 시 필터 업데이트
+    if (Object.keys(initialFilters).length > 0) {
+      setFilters(prev => ({ ...prev, ...initialFilters, page: 1 }));
+    }
+  }, [initialFilters]);
 
   useEffect(() => { fetchSessions(filters); }, [filters, fetchSessions]);
 

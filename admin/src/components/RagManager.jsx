@@ -4,7 +4,7 @@ const API = '/api/admin';
 const TYPE_COLORS = { faq: '#2196f3', product: '#4caf50', guide: '#ff9800', terms: '#9c27b0', manual: '#607d8b' };
 const TYPE_LABELS = { faq: 'FAQ', product: '요금제', guide: '가이드', terms: '약관', manual: '기타' };
 
-function RagManager() {
+function RagManager({ initialTab, initialFilter } = {}) {
   // 검색
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
@@ -28,7 +28,10 @@ function RagManager() {
   const [docPage, setDocPage] = useState(1);
 
   // 현재 탭
-  const [activeTab, setActiveTab] = useState('search');
+  const [activeTab, setActiveTab] = useState(initialTab || 'search');
+  // 벡터 검색 결과 (타입별)
+  const [typeSearchResults, setTypeSearchResults] = useState([]);
+  const [typeSearchType, setTypeSearchType] = useState('');
 
   const token = localStorage.getItem('admin_token');
   const headers = { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' };
@@ -36,6 +39,31 @@ function RagManager() {
   const fetchStats = useCallback(async () => {
     const res = await fetch(`${API}/rag/stats`, { headers });
     if (res.ok) setRagStats(await res.json());
+  }, []);
+
+  // 타입별 벡터 검색
+  const searchByType = useCallback(async (type) => {
+    const typeQueries = {
+      faq: 'FAQ 질문 답변',
+      products: '요금제 통신망 판매가 데이터',
+      guide: '셀프개통 절차 안내',
+      terms: '약관 계약 해지',
+      pdf: '프리텔레콤 이용약관'
+    };
+    const query = typeQueries[type] || type;
+    const res = await fetch(`${API}/rag/search?query=${encodeURIComponent(query)}&k=10`, { headers });
+    if (res.ok) {
+      const data = await res.json();
+      // 해당 타입만 필터
+      const filtered = data.results.filter(d => {
+        if (type === 'products') return d.metadata.type === 'product';
+        if (type === 'pdf') return d.metadata.type === 'terms' && d.metadata.source?.includes('pdf');
+        return d.metadata.type === type;
+      });
+      setTypeSearchResults(filtered.length > 0 ? filtered : data.results.slice(0, 10));
+      setTypeSearchType(type);
+      setActiveTab('typeview');
+    }
   }, []);
 
   const fetchDocuments = useCallback(async () => {
@@ -113,23 +141,36 @@ function RagManager() {
     <div className="rag-manager-page">
       <h2 className="page-title">RAG 벡터 검색 관리</h2>
 
-      {/* 통계 카드 */}
+      {/* 통계 카드 (클릭하여 조회) */}
       <div className="stat-cards">
-        <div className="stat-card highlight">
+        <div className="stat-card highlight clickable" onClick={() => { setActiveTab('search'); }}>
           <div className="stat-value">{ragStats?.totalDocuments || 0}</div>
           <div className="stat-label">전체 벡터</div>
         </div>
-        <div className="stat-card"><div className="stat-value">{ragStats?.faq || 0}</div><div className="stat-label">FAQ</div></div>
-        <div className="stat-card"><div className="stat-value">{ragStats?.products || 0}</div><div className="stat-label">요금제</div></div>
-        <div className="stat-card"><div className="stat-value">{ragStats?.guide || 0}</div><div className="stat-label">가이드</div></div>
-        <div className="stat-card"><div className="stat-value">{ragStats?.terms || 0}</div><div className="stat-label">약관</div></div>
-        <div className="stat-card"><div className="stat-value">{ragStats?.pdf || 0}</div><div className="stat-label">PDF</div></div>
-        {ragStats?.manual > 0 && <div className="stat-card"><div className="stat-value">{ragStats.manual}</div><div className="stat-label">수동추가</div></div>}
+        <div className="stat-card clickable" onClick={() => searchByType('faq')}>
+          <div className="stat-value">{ragStats?.faq || 0}</div><div className="stat-label">FAQ</div>
+        </div>
+        <div className="stat-card clickable" onClick={() => searchByType('products')}>
+          <div className="stat-value">{ragStats?.products || 0}</div><div className="stat-label">요금제</div>
+        </div>
+        <div className="stat-card clickable" onClick={() => searchByType('guide')}>
+          <div className="stat-value">{ragStats?.guide || 0}</div><div className="stat-label">가이드</div>
+        </div>
+        <div className="stat-card clickable" onClick={() => searchByType('terms')}>
+          <div className="stat-value">{ragStats?.terms || 0}</div><div className="stat-label">약관</div>
+        </div>
+        <div className="stat-card clickable" onClick={() => searchByType('pdf')}>
+          <div className="stat-value">{ragStats?.pdf || 0}</div><div className="stat-label">PDF</div>
+        </div>
+        {ragStats?.manual > 0 && <div className="stat-card clickable" onClick={() => { setDocFilter('manual'); setActiveTab('documents'); }}>
+          <div className="stat-value">{ragStats.manual}</div><div className="stat-label">수동추가</div>
+        </div>}
       </div>
 
       {/* 탭 메뉴 */}
       <div className="rag-tabs">
         <button className={`rag-tab ${activeTab === 'search' ? 'active' : ''}`} onClick={() => setActiveTab('search')}>🔍 벡터 검색</button>
+        <button className={`rag-tab ${activeTab === 'typeview' ? 'active' : ''}`} onClick={() => setActiveTab('typeview')}>📄 타입별 조회</button>
         <button className={`rag-tab ${activeTab === 'add' ? 'active' : ''}`} onClick={() => setActiveTab('add')}>➕ 문서 추가</button>
         <button className={`rag-tab ${activeTab === 'documents' ? 'active' : ''}`} onClick={() => setActiveTab('documents')}>📋 추가 이력 ({docTotal})</button>
         <button className={`rag-tab ${activeTab === 'reindex' ? 'active' : ''}`} onClick={() => setActiveTab('reindex')}>🔄 재인덱싱</button>
@@ -257,6 +298,34 @@ function RagManager() {
                 </div>
               )}
             </>
+          )}
+        </div>
+      )}
+
+      {/* ── 타입별 조회 ── */}
+      {activeTab === 'typeview' && (
+        <div className="rag-section">
+          {typeSearchType && (
+            <div className="result-header" style={{ marginBottom: 12 }}>
+              📄 <strong>{TYPE_LABELS[typeSearchType] || typeSearchType}</strong> 벡터 문서 ({typeSearchResults.length}건)
+            </div>
+          )}
+          {typeSearchResults.length === 0 ? (
+            <div className="no-data">위 통계 카드를 클릭하면 해당 타입의 문서를 조회합니다.</div>
+          ) : (
+            typeSearchResults.map((r, idx) => (
+              <div key={idx} className="result-card">
+                <div className="result-top">
+                  <span className="result-rank">#{idx + 1}</span>
+                  <span className="result-type" style={{ background: TYPE_COLORS[r.metadata.type] || '#607d8b' }}>{TYPE_LABELS[r.metadata.type] || r.metadata.type}</span>
+                  {r.metadata.name && <span className="result-name">{r.metadata.name}</span>}
+                  {r.metadata.network && <span className="result-category">{r.metadata.network}</span>}
+                  {r.metadata.monthlyFee > 0 && <span className="result-name">{Number(r.metadata.monthlyFee).toLocaleString()}원</span>}
+                </div>
+                <div className="result-content">{r.content}</div>
+                {r.metadata.detailUrl && <a href={r.metadata.detailUrl} target="_blank" rel="noopener noreferrer" className="result-link">🔗 상세 페이지</a>}
+              </div>
+            ))
           )}
         </div>
       )}

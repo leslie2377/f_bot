@@ -11,7 +11,7 @@ const CAT_LABELS = {
   cs: '고객센터', general: '일반', error: '오류', payment: '결제'
 };
 
-function Dashboard() {
+function Dashboard({ onNavigate }) {
   const { overview, isLoading, fetchStats } = useStats();
 
   useEffect(() => { fetchStats(); }, [fetchStats]);
@@ -23,7 +23,6 @@ function Dashboard() {
   const sourceDistribution = overview.sourceDistribution || {};
   const todayHourly = overview.todayHourly || [];
 
-  // snake_case/camelCase 모두 호환
   const totalSessions = ov.totalSessions ?? ov.total_sessions ?? 0;
   const todaySessions = ov.todaySessions ?? ov.today_sessions ?? 0;
   const activeSessions = ov.activeSessions ?? ov.active_sessions ?? 0;
@@ -35,7 +34,7 @@ function Dashboard() {
   const feedbackBad = ov.totalFeedbackBad ?? ov.total_feedback_bad ?? 0;
 
   const catData = Object.entries(categoryDistribution).map(([key, value]) => ({
-    name: CAT_LABELS[key] || key, value, color: CAT_COLORS[key] || '#607d8b'
+    name: CAT_LABELS[key] || key, value, key, color: CAT_COLORS[key] || '#607d8b'
   }));
 
   const sourceData = Object.entries(sourceDistribution).map(([key, value]) => {
@@ -43,28 +42,34 @@ function Dashboard() {
     return { name: labels[key] || key, value };
   });
 
+  const today = new Date().toISOString().slice(0, 10);
+
+  // 카드 클릭 핸들러
+  const goSessions = (filters = {}) => onNavigate?.('sessions', filters);
+  const goUnresolved = () => onNavigate?.('unresolved');
+
   return (
     <div className="dashboard">
       <h2 className="page-title">대시보드</h2>
 
       <div className="stat-cards">
-        <div className="stat-card">
+        <div className="stat-card clickable" onClick={() => goSessions({})}>
           <div className="stat-value">{totalSessions}</div>
           <div className="stat-label">전체 상담</div>
         </div>
-        <div className="stat-card highlight">
+        <div className="stat-card highlight clickable" onClick={() => goSessions({ dateFrom: today, dateTo: today })}>
           <div className="stat-value">{todaySessions}</div>
           <div className="stat-label">오늘 상담</div>
         </div>
-        <div className="stat-card">
+        <div className="stat-card clickable" onClick={() => goSessions({ status: 'active' })}>
           <div className="stat-value">{activeSessions}</div>
           <div className="stat-label">진행 중</div>
         </div>
-        <div className="stat-card warn">
+        <div className="stat-card warn clickable" onClick={() => goSessions({ status: 'unresolved' })}>
           <div className="stat-value">{unresolvedCount}</div>
           <div className="stat-label">미해결</div>
         </div>
-        <div className="stat-card">
+        <div className="stat-card clickable" onClick={() => goSessions({})}>
           <div className="stat-value">{totalMessages}</div>
           <div className="stat-label">전체 메시지</div>
         </div>
@@ -84,11 +89,14 @@ function Dashboard() {
 
       <div className="charts-row">
         <div className="chart-card">
-          <h3>카테고리 분포</h3>
+          <h3>카테고리 분포 <span style={{ fontSize: 11, color: '#aaa' }}>(클릭하여 조회)</span></h3>
           {catData.length > 0 ? (
             <ResponsiveContainer width="100%" height={250}>
               <PieChart>
-                <Pie data={catData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={90} label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}>
+                <Pie data={catData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={90}
+                  label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                  onClick={(data) => goSessions({ category: data.key })}
+                  style={{ cursor: 'pointer' }}>
                   {catData.map((entry, i) => <Cell key={i} fill={entry.color} />)}
                 </Pie>
                 <Tooltip />

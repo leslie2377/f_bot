@@ -45,7 +45,10 @@ body {
 
 /* ── 통계 카드 ── */
 .stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-bottom: 24px; }
-.stat-card { background: #fff; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.stat-card { background: #fff; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s; }
+.stat-card.clickable { cursor: pointer; }
+.stat-card.clickable:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); border-color: #e91e63; }
+.stat-card.clickable:active { transform: translateY(0); }
 .stat-card.highlight { border-left: 4px solid #e91e63; }
 .stat-card.warn { border-left: 4px solid #ff9800; }
 .stat-value { font-size: 28px; font-weight: 800; color: #1a1a2e; }

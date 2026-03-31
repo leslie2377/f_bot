@@ -9,28 +9,30 @@ import RagManager from './RagManager.jsx';
 function AdminLayout({ onLogout }) {
   const [currentPage, setCurrentPage] = useState('dashboard');
   const [selectedSessionId, setSelectedSessionId] = useState(null);
+  const [pageParams, setPageParams] = useState({});
 
-  const navigate = (page, sessionId = null) => {
+  const navigate = (page, params = {}) => {
     setCurrentPage(page);
-    if (sessionId) setSelectedSessionId(sessionId);
+    setPageParams(params);
+    if (params.sessionId) setSelectedSessionId(params.sessionId);
   };
 
   const renderContent = () => {
     switch (currentPage) {
       case 'dashboard':
-        return <Dashboard />;
+        return <Dashboard onNavigate={navigate} />;
       case 'sessions':
-        return <SessionList onSelectSession={(id) => navigate('detail', id)} />;
+        return <SessionList onSelectSession={(id) => navigate('detail', { sessionId: id })} initialFilters={pageParams} />;
       case 'detail':
         return <SessionDetail sessionId={selectedSessionId} onBack={() => navigate('sessions')} />;
       case 'unresolved':
-        return <UnresolvedList onSelectSession={(id) => navigate('detail', id)} />;
+        return <UnresolvedList onSelectSession={(id) => navigate('detail', { sessionId: id })} />;
       case 'keywords':
         return <KeywordStats />;
       case 'rag':
-        return <RagManager />;
+        return <RagManager initialTab={pageParams.tab} initialFilter={pageParams.filter} />;
       default:
-        return <Dashboard />;
+        return <Dashboard onNavigate={navigate} />;
     }
   };
 
@@ -42,21 +44,11 @@ function AdminLayout({ onLogout }) {
           <span className="sidebar-title">프리티 관리자</span>
         </div>
         <nav className="sidebar-nav">
-          <button className={`nav-item ${currentPage === 'dashboard' ? 'active' : ''}`} onClick={() => navigate('dashboard')}>
-            📊 대시보드
-          </button>
-          <button className={`nav-item ${currentPage === 'sessions' || currentPage === 'detail' ? 'active' : ''}`} onClick={() => navigate('sessions')}>
-            💬 세션 목록
-          </button>
-          <button className={`nav-item ${currentPage === 'unresolved' ? 'active' : ''}`} onClick={() => navigate('unresolved')}>
-            ❓ 미해결 질문
-          </button>
-          <button className={`nav-item ${currentPage === 'keywords' ? 'active' : ''}`} onClick={() => navigate('keywords')}>
-            🔑 키워드 통계
-          </button>
-          <button className={`nav-item ${currentPage === 'rag' ? 'active' : ''}`} onClick={() => navigate('rag')}>
-            🧠 RAG 관리
-          </button>
+          <button className={`nav-item ${currentPage === 'dashboard' ? 'active' : ''}`} onClick={() => navigate('dashboard')}>📊 대시보드</button>
+          <button className={`nav-item ${currentPage === 'sessions' || currentPage === 'detail' ? 'active' : ''}`} onClick={() => navigate('sessions')}>💬 세션 목록</button>
+          <button className={`nav-item ${currentPage === 'unresolved' ? 'active' : ''}`} onClick={() => navigate('unresolved')}>❓ 미해결 질문</button>
+          <button className={`nav-item ${currentPage === 'keywords' ? 'active' : ''}`} onClick={() => navigate('keywords')}>🔑 키워드 통계</button>
+          <button className={`nav-item ${currentPage === 'rag' ? 'active' : ''}`} onClick={() => navigate('rag')}>🧠 RAG 관리</button>
         </nav>
         <div className="sidebar-footer">
           <button className="logout-btn" onClick={onLogout}>로그아웃</button>
