@@ -172,7 +172,7 @@ function generateFallbackReply(message, category) {
   const lower = message.toLowerCase();
 
   if (category === 'product' || ['요금', '가격', '추천'].some(k => lower.includes(k))) {
-    const products = getProducts();
+    const products = getProducts().filter(p => !(p.name || '').includes('선불'));
     const top = products.sort((a, b) => (a.sellingPrice || a.monthlyFee) - (b.sellingPrice || b.monthlyFee)).slice(0, 4);
     let reply = '프리티 요금제를 안내드립니다.\n\n';
     // 가로 테이블
