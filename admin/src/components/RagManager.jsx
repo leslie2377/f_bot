@@ -41,27 +41,20 @@ function RagManager({ initialTab, initialFilter } = {}) {
     if (res.ok) setRagStats(await res.json());
   }, []);
 
-  // 타입별 벡터 검색
-  const searchByType = useCallback(async (type) => {
-    const typeQueries = {
-      faq: 'FAQ 질문 답변',
-      products: '요금제 통신망 판매가 데이터',
-      guide: '셀프개통 절차 안내',
-      terms: '약관 계약 해지',
-      pdf: '프리텔레콤 이용약관'
-    };
-    const query = typeQueries[type] || type;
-    const res = await fetch(`${API}/rag/search?query=${encodeURIComponent(query)}&k=10`, { headers });
+  // 타입별 원본 데이터 조회
+  const [typePage, setTypePage] = useState(1);
+  const [typeTotalPages, setTypeTotalPages] = useState(0);
+  const [typeTotal, setTypeTotal] = useState(0);
+
+  const searchByType = useCallback(async (type, page = 1) => {
+    const res = await fetch(`${API}/rag/data/${type}?page=${page}&limit=20`, { headers });
     if (res.ok) {
       const data = await res.json();
-      // 해당 타입만 필터
-      const filtered = data.results.filter(d => {
-        if (type === 'products') return d.metadata.type === 'product';
-        if (type === 'pdf') return d.metadata.type === 'terms' && d.metadata.source?.includes('pdf');
-        return d.metadata.type === type;
-      });
-      setTypeSearchResults(filtered.length > 0 ? filtered : data.results.slice(0, 10));
+      setTypeSearchResults(data.items);
       setTypeSearchType(type);
+      setTypeTotal(data.total);
+      setTypeTotalPages(data.totalPages);
+      setTypePage(page);
       setActiveTab('typeview');
     }
   }, []);
@@ -307,25 +300,63 @@ function RagManager({ initialTab, initialFilter } = {}) {
         <div className="rag-section">
           {typeSearchType && (
             <div className="result-header" style={{ marginBottom: 12 }}>
-              📄 <strong>{TYPE_LABELS[typeSearchType] || typeSearchType}</strong> 벡터 문서 ({typeSearchResults.length}건)
+              📄 <strong>{TYPE_LABELS[typeSearchType] || typeSearchType}</strong> 원본 데이터 (총 {typeTotal}건, {typePage}/{typeTotalPages} 페이지)
             </div>
           )}
           {typeSearchResults.length === 0 ? (
-            <div className="no-data">위 통계 카드를 클릭하면 해당 타입의 문서를 조회합니다.</div>
+            <div className="no-data">위 통계 카드를 클릭하면 해당 타입의 데이터를 조회합니다.</div>
           ) : (
-            typeSearchResults.map((r, idx) => (
-              <div key={idx} className="result-card">
-                <div className="result-top">
-                  <span className="result-rank">#{idx + 1}</span>
-                  <span className="result-type" style={{ background: TYPE_COLORS[r.metadata.type] || '#607d8b' }}>{TYPE_LABELS[r.metadata.type] || r.metadata.type}</span>
-                  {r.metadata.name && <span className="result-name">{r.metadata.name}</span>}
-                  {r.metadata.network && <span className="result-category">{r.metadata.network}</span>}
-                  {r.metadata.monthlyFee > 0 && <span className="result-name">{Number(r.metadata.monthlyFee).toLocaleString()}원</span>}
+            <>
+              {typeSearchType === 'products' ? (
+                <div style={{ overflowX: 'auto' }}>
+                  <table className="session-table">
+                    <thead>
+                      <tr>
+                        <th>요금제명</th><th>통신망</th><th>판매가</th><th>데이터</th><th>통화</th><th>할인</th><th>카테고리</th><th>상세</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {typeSearchResults.map((r) => (
+                        <tr key={r.id}>
+                          <td style={{ fontWeight: 600 }}>{r.name}</td>
+                          <td>{r.network}</td>
+                          <td style={{ color: '#e91e63', fontWeight: 700 }}>{(r.sellingPrice || 0).toLocaleString()}원</td>
+                          <td>{r.data}</td>
+                          <td>{r.voice}</td>
+                          <td style={{ fontSize: 11, color: '#888' }}>
+                            {r.hasDiscount ? `${r.discountMonths}개월→${(r.afterDiscountPrice || 0).toLocaleString()}원` : '-'}
+                          </td>
+                          <td style={{ fontSize: 11 }}>{(r.categories || []).slice(0, 2).join(', ')}</td>
+                          <td><a href={r.detailUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#e91e63', fontSize: 12 }}>보기</a></td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
-                <div className="result-content">{r.content}</div>
-                {r.metadata.detailUrl && <a href={r.metadata.detailUrl} target="_blank" rel="noopener noreferrer" className="result-link">🔗 상세 페이지</a>}
-              </div>
-            ))
+              ) : (
+                typeSearchResults.map((r, idx) => (
+                  <div key={r.id || idx} className="result-card">
+                    <div className="result-top">
+                      <span className="result-rank">#{(typePage - 1) * 20 + idx + 1}</span>
+                      <span className="result-type" style={{ background: TYPE_COLORS[r.type] || '#607d8b' }}>{TYPE_LABELS[r.type] || r.type}</span>
+                      {r.title && <span className="result-name">{r.title}</span>}
+                      {r.category && <span className="result-category">{r.category}</span>}
+                      {r.section && <span className="result-source">{r.section}</span>}
+                    </div>
+                    <div className="result-content">{r.content}</div>
+                    {r.keywords && <div style={{ marginTop: 4, fontSize: 11, color: '#aaa' }}>키워드: {r.keywords.join(', ')}</div>}
+                  </div>
+                ))
+              )}
+
+              {typeTotalPages > 1 && (
+                <div className="pagination">
+                  <button disabled={typePage <= 1} onClick={() => searchByType(typeSearchType, typePage - 1)}>← 이전</button>
+                  <span>{typePage} / {typeTotalPages} ({typeTotal}건)</span>
+                  <button disabled={typePage >= typeTotalPages} onClick={() => searchByType(typeSearchType, typePage + 1)}>다음 →</button>
+                </div>
+              )}
+            </>
           )}
         </div>
       )}

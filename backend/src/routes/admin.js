@@ -107,6 +107,66 @@ router.post('/responses/add', async (req, res) => {
   res.json({ success: true, ...result, faqAdded: !!addToFaq, message: addToFaq ? '캐시 + FAQ + 벡터DB 반영 완료' : '캐시에 반영 완료' });
 });
 
+// ═══ RAG 타입별 원본 데이터 조회 ═══
+router.get('/rag/data/:type', (req, res) => {
+  const { type } = req.params;
+  const { page = 1, limit = 20 } = req.query;
+  const p = parseInt(page);
+  const l = Math.min(parseInt(limit), 100);
+  const dataDir = path.join(__dirname, '..', 'data');
+
+  let items = [];
+  let total = 0;
+
+  if (type === 'faq') {
+    const all = JSON.parse(fs.readFileSync(path.join(dataDir, 'faq.json'), 'utf-8'));
+    total = all.length;
+    items = all.slice((p - 1) * l, p * l).map(f => ({
+      id: f.id, type: 'faq', category: f.category,
+      title: f.question, content: f.answer, keywords: f.keywords
+    }));
+  } else if (type === 'products') {
+    const all = JSON.parse(fs.readFileSync(path.join(dataDir, 'products.json'), 'utf-8'));
+    total = all.length;
+    items = all.slice((p - 1) * l, p * l).map(pr => ({
+      id: pr.id, type: 'product', name: pr.name, network: pr.network,
+      sellingPrice: pr.sellingPrice || pr.monthlyFee,
+      data: pr.data, voice: pr.voice, sms: pr.sms,
+      categories: pr.categories, detailUrl: pr.detailUrl,
+      hasDiscount: pr.hasDiscount, discountMonths: pr.discountMonths,
+      afterDiscountPrice: pr.afterDiscountPrice
+    }));
+  } else if (type === 'terms') {
+    const all = JSON.parse(fs.readFileSync(path.join(dataDir, 'terms.json'), 'utf-8'));
+    total = all.length;
+    items = all.slice((p - 1) * l, p * l).map(t => ({
+      id: t.id, type: 'terms', title: t.title, section: t.section,
+      content: t.summary
+    }));
+  } else if (type === 'guide') {
+    const guide = JSON.parse(fs.readFileSync(path.join(dataDir, 'guide.json'), 'utf-8'));
+    const steps = guide.selfActivation?.steps || [];
+    total = steps.length;
+    items = steps.slice((p - 1) * l, p * l).map((s, i) => ({
+      id: `step_${s.step}`, type: 'guide', title: `${s.step}단계: ${s.title}`,
+      content: s.description + (s.note ? ` (※${s.note})` : '')
+    }));
+  } else if (type === 'pdf') {
+    const pdfDir = path.join(dataDir, 'pdf');
+    if (fs.existsSync(pdfDir)) {
+      const files = fs.readdirSync(pdfDir).filter(f => f.endsWith('.pdf'));
+      total = files.length;
+      items = files.map(f => ({
+        id: f, type: 'pdf', title: f,
+        content: `${f} (벡터 DB에 청크로 저장됨)`,
+        size: fs.statSync(path.join(pdfDir, f)).size
+      }));
+    }
+  }
+
+  res.json({ items, total, page: p, limit: l, totalPages: Math.ceil(total / l) });
+});
+
 // ═══ 키워드 ═══
 router.get('/keywords', (req, res) => {
   res.json(dbQ.getKeywordStats({ sort: req.query.sort, limit: parseInt(req.query.limit) || 50, category: req.query.category }));
