@@ -159,7 +159,18 @@ function ChatWidget() {
 }
 
 function MessageContent({ content }) {
-  const blocks = parseBlocks(content);
+  // ACTION 버튼 추출
+  const actionRegex = /\[ACTION:([^\]]+)\]/g;
+  const actions = [];
+  let match;
+  while ((match = actionRegex.exec(content)) !== null) {
+    const parts = match[1].split(':');
+    const label = parts[0];
+    const url = parts.slice(1).join(':') || null;
+    actions.push({ label, url });
+  }
+  const cleanContent = content.replace(/\[ACTION:[^\]]+\]\n?/g, '').trim();
+  const blocks = parseBlocks(cleanContent);
 
   // 테이블이 2개 이상이면 → 카드 슬라이더로 묶기 (제목 포함)
   const tableCount = blocks.filter(b => b.type === 'table').length;
@@ -199,6 +210,7 @@ function MessageContent({ content }) {
         {beforeCards.map((b, i) => <div key={`b${i}`} style={{ minHeight: b.text === '' ? '8px' : 'auto' }}>{processLine(b.text)}</div>)}
         <PlanCardSlider cards={cards} />
         {afterCards.map((b, i) => <div key={`a${i}`} style={{ minHeight: b.text === '' ? '8px' : 'auto' }}>{processLine(b.text)}</div>)}
+        {actions.length > 0 && <ActionButtons actions={actions} />}
       </div>
     );
   }
@@ -210,6 +222,7 @@ function MessageContent({ content }) {
         if (block.type === 'line') return <div key={i} style={{ minHeight: block.text === '' ? '8px' : 'auto' }}>{processLine(block.text)}</div>;
         return null;
       })}
+      {actions.length > 0 && <ActionButtons actions={actions} />}
     </div>
   );
 }
@@ -245,6 +258,44 @@ function parseBlocks(content) {
     }
   }
   return blocks;
+}
+
+// 바로가기 액션 버튼 (이미지 참고 스타일)
+function ActionButtons({ actions }) {
+  return (
+    <div className="action-buttons">
+      {actions.map((action, i) => {
+        const isExternal = action.url && action.url.startsWith('http');
+        const isInternal = action.url === 'recommend' || action.url === 'ask';
+
+        if (isExternal) {
+          return (
+            <a key={i} href={action.url} target="_blank" rel="noopener noreferrer" className="action-link-btn">
+              <span className="action-link-icon">🔗</span>
+              <span className="action-link-label">{action.label}</span>
+              <span className="action-link-arrow">›</span>
+            </a>
+          );
+        }
+        return (
+          <button key={i} className="action-link-btn" onClick={() => {
+            // 입력창에 반영하는 대신 document 이벤트로 전달
+            const input = document.querySelector('.chat-input');
+            if (input) {
+              const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
+              nativeInputValueSetter.call(input, action.label);
+              input.dispatchEvent(new Event('input', { bubbles: true }));
+              input.focus();
+            }
+          }}>
+            <span className="action-link-icon">💬</span>
+            <span className="action-link-label">{action.label}</span>
+            <span className="action-link-arrow">›</span>
+          </button>
+        );
+      })}
+    </div>
+  );
 }
 
 // 요금제 카드 슬라이더 (좌우 이동)
