@@ -271,7 +271,7 @@ function getKeywordStats({ sort = 'count', limit = 50, category } = {}) {
 function getCachedResponse(queryKey) {
   // 1. 정확 매칭
   const exact = db.prepare(`
-    SELECT * FROM response_cache WHERE query_key = ? AND created_at > datetime('now','+9 hours', '-24 hours')
+    SELECT * FROM response_cache WHERE query_key = ? AND created_at > datetime('now','+9 hours', '-7 days')
   `).get(queryKey);
 
   if (exact) {
@@ -282,7 +282,7 @@ function getCachedResponse(queryKey) {
   // 2. 키워드 포함 매칭 (queryKey의 핵심 단어가 캐시 키에 포함)
   const words = queryKey.split(' ').filter(w => w.length >= 2);
   if (words.length >= 2) {
-    const rows = db.prepare(`SELECT * FROM response_cache WHERE created_at > datetime('now','+9 hours', '-24 hours')`).all();
+    const rows = db.prepare(`SELECT * FROM response_cache WHERE created_at > datetime('now','+9 hours', '-7 days')`).all();
     for (const row of rows) {
       const matchCount = words.filter(w => row.query_key.includes(w)).length;
       if (matchCount >= 2 && matchCount / words.length >= 0.6) {
@@ -309,7 +309,7 @@ function invalidateCache(queryKey) {
 function getCacheStats() {
   const stats = db.prepare(`
     SELECT COUNT(*) as cacheSize, COALESCE(SUM(hit_count),0) as totalHits FROM response_cache
-    WHERE created_at > datetime('now', '-24 hours')
+    WHERE created_at > datetime('now', '-7 days')
   `).get();
   return { ...stats, maxCache: 500, cacheTtlHours: 24 };
 }

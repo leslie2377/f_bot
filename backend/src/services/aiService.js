@@ -97,20 +97,19 @@ async function chat(message, sessionId) {
   let source = 'rag';
   let tokensUsed = { input: 0, output: 0 };
 
-  // ── 1단계: FAQ 직접 매칭 ──
+  // ── 1단계: FAQ 직접 매칭 (대화 초반이 아니어도 매칭 시도) ──
   const history = getHistory(sessionId);
   const faqMatch = findExactFaqMatch(message);
-  if (faqMatch && history.length <= 2) {
+  if (faqMatch) {
     reply = faqMatch.answer;
     source = 'faq_direct';
   }
 
   // ── 2단계: DB 캐시 조회 ──
-  // 사용량/조건 포함 메시지는 매번 RAG 검색 필요 (캐시 스킵)
+  // 사용량 포함 메시지만 캐시 스킵 (대화 중이어도 캐시 활용)
   const hasUsageInfo = /\d+\s*(gb|기가|분|만원|만\s*원)/i.test(message);
-  const isConversational = history.length > 2; // 대화 중이면 캐시 스킵
 
-  if (!reply && !hasUsageInfo && !isConversational) {
+  if (!reply && !hasUsageInfo) {
     const queryKey = normalizeQuery(message);
     const cached = dbQ.getCachedResponse(queryKey);
     if (cached && !isUnresolved(cached.reply)) {
@@ -208,7 +207,32 @@ function generateFallbackReply(message, category) {
   return '죄송합니다. 해당 문의에 대해 정확한 답변을 드리기 어렵습니다.\n\n고객센터로 문의해주시면 상세한 안내를 받으실 수 있습니다.\n\n| 통신망 | 전화번호 |\n|--------|----------|\n| SKT | [1661-2207](tel:1661-2207) |\n| KT | [1577-4551](tel:1577-4551) |\n| U+ | [1588-3615](tel:1588-3615) |\n\n⏰ 평일 09:00~18:00\n💬 [1:1 문의](https://www.freet.co.kr/customer/inquiry/form)';
 }
 
-// 서버 시작 시 RAG 초기화
-initChain().catch(err => console.error('RAG 초기화 실패:', err.message));
+// 서버 시작 시 RAG 초기화 + 캐시 워밍
+initChain().then(() => {
+  // 자주 묻는 질문 사전 캐시 (백그라운드)
+  const warmupQueries = [
+    '요금제 추천해주세요',
+    '셀프개통 방법',
+    '고객센터 연락처',
+    '저렴한 후불 요금제',
+    'eSIM 개통 방법',
+    '번호이동 방법',
+    '유심 안내',
+    '약관 안내',
+  ];
+  let idx = 0;
+  const warmNext = () => {
+    if (idx >= warmupQueries.length) { console.log(`캐시 워밍 완료: ${warmupQueries.length}건`); return; }
+    const q = warmupQueries[idx++];
+    const key = q.replace(/[?？！!~.,\s]+/g, ' ').trim().toLowerCase();
+    const cached = dbQ.getCachedResponse(key);
+    if (cached) { warmNext(); return; }
+    ragChat(q, '').then(reply => {
+      dbQ.setCachedResponse(key, reply, detectCategory(q));
+      setTimeout(warmNext, 500);
+    }).catch(() => setTimeout(warmNext, 100));
+  };
+  setTimeout(warmNext, 2000); // 서버 시작 2초 후 워밍 시작
+}).catch(err => console.error('RAG 초기화 실패:', err.message));
 
 module.exports = { chat };
