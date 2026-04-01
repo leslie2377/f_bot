@@ -25,7 +25,13 @@ function ChatWidget() {
   };
 
   const handleQuickButton = (text) => {
-    sendMessage(text);
+    setInput(text);
+    inputRef.current?.focus();
+  };
+
+  const handleMenuClick = (value) => {
+    setInput(value);
+    inputRef.current?.focus();
   };
 
   return (
@@ -48,28 +54,45 @@ function ChatWidget() {
           {/* 메시지 영역 */}
           <div className="chat-messages">
             {messages.map((msg, idx) => (
-              <div key={idx} className={`chat-message ${msg.role}`}>
-                {msg.role === 'bot' && <div className="bot-avatar">🤖</div>}
-                <div className="message-bubble-wrap">
-                  <div className={`message-bubble ${msg.role}`}>
-                    <MessageContent content={msg.content} />
-                  </div>
-                  {msg.role === 'bot' && msg.messageId && (
-                    <div className="feedback-buttons">
-                      <button
-                        className={`feedback-btn ${msg.feedback === 'good' ? 'active' : ''}`}
-                        onClick={() => sendFeedback(msg.messageId, 'good')}
-                        disabled={!!msg.feedback}
-                      >👍</button>
-                      <button
-                        className={`feedback-btn ${msg.feedback === 'bad' ? 'active bad' : ''}`}
-                        onClick={() => sendFeedback(msg.messageId, 'bad')}
-                        disabled={!!msg.feedback}
-                      >👎</button>
+              <React.Fragment key={idx}>
+                {/* 그리드 메뉴 (첫 메시지) */}
+                {msg.menuGrid && (
+                  <div className="menu-section">
+                    <div className="menu-section-title">❓ 자주하는 질문입니다.</div>
+                    <div className="menu-grid">
+                      {msg.menuGrid.map((item, mi) => (
+                        <button key={mi} className="menu-grid-btn" onClick={() => handleMenuClick(item.value)}>
+                          <span className="menu-icon">{item.icon}</span>
+                          <span className="menu-label">{item.label}</span>
+                        </button>
+                      ))}
                     </div>
-                  )}
+                  </div>
+                )}
+
+                <div className={`chat-message ${msg.role}`}>
+                  {msg.role === 'bot' && <div className="bot-avatar">🤖</div>}
+                  <div className="message-bubble-wrap">
+                    <div className={`message-bubble ${msg.role}`}>
+                      <MessageContent content={msg.content} />
+                    </div>
+                    {msg.role === 'bot' && msg.messageId && (
+                      <div className="feedback-buttons">
+                        <button
+                          className={`feedback-btn ${msg.feedback === 'good' ? 'active' : ''}`}
+                          onClick={() => sendFeedback(msg.messageId, 'good')}
+                          disabled={!!msg.feedback}
+                        >👍</button>
+                        <button
+                          className={`feedback-btn ${msg.feedback === 'bad' ? 'active bad' : ''}`}
+                          onClick={() => sendFeedback(msg.messageId, 'bad')}
+                          disabled={!!msg.feedback}
+                        >👎</button>
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
+              </React.Fragment>
             ))}
 
             {/* 로딩 표시 */}
@@ -112,7 +135,7 @@ function ChatWidget() {
               ref={inputRef}
               type="text"
               className="chat-input"
-              placeholder="궁금한 점을 물어보세요..."
+              placeholder="프리티 챗봇에 무엇이든 물어보세요!"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               disabled={isLoading}
